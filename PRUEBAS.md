@@ -16,7 +16,7 @@ Hay dos bloques: las pruebas de la **versión 2 de la demo** (postulaciones, equ
 | Proyectos abiertos | Correcta | Muestra lugares libres, evita postularse dos veces, deja de aparecer al completarse el equipo |
 | Equipos | Correcta | Aceptar y no aceptar, sumar directamente, quitar (tareas sin responsable, con historial), coordinador, cambiar lugares, filtro por habilidad, volver a postularse |
 | Guía del recorrido | Correcta | Los 9 pasos se suceden según el estado (de "vacío" a "proyecto cerrado" y ejemplo); ocultar y mostrar; enlace con rol preseleccionado |
-| Herramientas | Correcta | 11 herramientas con logo, uso, condición gratuita y enlace seguro, en la bienvenida y en la aplicación |
+| Herramientas | Correcta | 12 herramientas con logo, uso, condición gratuita y enlace seguro, en la bienvenida y en la aplicación |
 | Accesibilidad | Correcta | En 9 pantallas nuevas: un `h1`, sin saltos de encabezado, una región `main`, campos con etiqueta, botones con nombre, sin `id` duplicados y título distinto |
 | Móvil (375 px) | Correcta | Sin desborde horizontal en formularios, postulaciones, equipos, herramientas y paneles |
 

@@ -119,7 +119,7 @@ Los estados se indican con **texto e ícono**, no solo con color.
 
 ## 6. Herramientas
 
-La sección reúne herramientas **gratuitas** (o con plan gratuito) que usan los equipos: **Trello, Google Drive, Google Docs y Canva** (las de la prueba piloto) y, además, **Google Calendar, Google Sheets, Google Forms, Google Meet, WhatsApp Business, Meta Business Suite y Perfil de Empresa de Google**. Cada una muestra su logo, para qué sirve y su enlace. La plataforma ordena el proceso; los documentos y los diseños se siguen creando en cada herramienta. Los logos pertenecen a sus marcas.
+La sección reúne herramientas **gratuitas** (o con plan gratuito) que usan los equipos: **Trello, Google Drive, Google Docs y Canva** (las de la prueba piloto) y, además, **Google Calendar, Google Sheets, Google Forms, Figma, Google Meet, WhatsApp Business, Meta Business Suite y Perfil de Empresa de Google** (en la categoría Diseño están Canva y Figma). Cada una muestra su logo, para qué sirve y su enlace. La plataforma ordena el proceso; los documentos y los diseños se siguen creando en cada herramienta. Los logos pertenecen a sus marcas.
 
 ## 7. El caso de ejemplo
 

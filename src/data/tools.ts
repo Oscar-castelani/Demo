@@ -1,5 +1,5 @@
 import {
-  siGooglecalendar, siGoogledocs, siGoogledrive, siGoogleforms, siGooglemeet, siGooglesheets, siMeta,
+  siFigma, siGooglecalendar, siGoogledocs, siGoogledrive, siGoogleforms, siGooglemeet, siGooglesheets, siMeta,
   siTrello, siWhatsapp,
 } from 'simple-icons'
 
@@ -63,6 +63,11 @@ export const TOOLS: Tool[] = [
     id: 'canva', name: 'Canva', category: 'Diseño', pilot: true,
     usage: 'Diseño de publicaciones, plantillas y piezas gráficas con la identidad del comercio.',
     url: 'https://www.canva.com', free: 'Plan gratuito', glyph: 'design',
+  },
+  {
+    id: 'figma', name: 'Figma', category: 'Diseño',
+    usage: 'Diseño colaborativo de pantallas, prototipos y piezas gráficas, con comentarios del equipo y del comercio.',
+    url: 'https://www.figma.com', free: 'Plan gratuito', icon: fromSi(siFigma),
   },
   {
     id: 'meet', name: 'Google Meet', category: 'Comunicación',

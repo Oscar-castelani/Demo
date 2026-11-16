@@ -127,3 +127,7 @@
 - El caso de ejemplo ya no usa ningún dato real: comercio (*Vivero Raíces*, de ejemplo), persona a cargo, tres estudiantes, docente, 8 tareas y entregables son inventados y están marcados como simulados.
 - Los entregables del ejemplo apuntan a las páginas de inicio de Trello y Canva, no a proyectos reales.
 - Se quitó de la interfaz, los datos y la documentación cualquier mención a personas, comercios o enlaces del proyecto real de la prueba piloto.
+
+## Herramientas: Figma
+
+- Se agregó **Figma** a la categoría **Diseño**, junto con Canva (plan gratuito, con logo oficial de `simple-icons` y enlace seguro). La sección pasa a tener 12 herramientas.

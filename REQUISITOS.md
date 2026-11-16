@@ -69,7 +69,7 @@ Los permisos se simulan en la interfaz y en los servicios; no son un sistema de 
 
 ## Herramientas
 
-Trello, Google Drive, Google Docs y Canva (las del piloto, sin Instagram) y, además, Google Calendar, Google Sheets, Google Forms, Google Meet, WhatsApp Business, Meta Business Suite y Perfil de Empresa de Google. Todas gratuitas o con plan gratuito, con su logo, para qué sirven y enlace. Los logos pertenecen a sus marcas.
+Trello, Google Drive, Google Docs y Canva (las del piloto, sin Instagram) y, además, Google Calendar, Google Sheets, Google Forms, Figma (categoría Diseño, junto con Canva), Google Meet, WhatsApp Business, Meta Business Suite y Perfil de Empresa de Google. Todas gratuitas o con plan gratuito, con su logo, para qué sirven y enlace. Los logos pertenecen a sus marcas.
 
 ## Requisitos no funcionales
 
