@@ -5,6 +5,7 @@ import { useDemo } from '../hooks/useDemo'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 import { WarningBanner } from '../components/common/WarningBanner'
 import { LoadExampleButton } from '../components/common/LoadExampleButton'
+import { ScenarioPicker } from '../components/common/ScenarioPicker'
 import { ROLE_DESCRIPTIONS, ROLE_LABELS, ROLE_ORDER } from '../utils/labels'
 import type { Role } from '../types'
 
@@ -99,6 +100,7 @@ export function RoleSelectPage() {
           </div>
           <LoadExampleButton />
         </div>
+        <ScenarioPicker />
       </div>
     </main>
   )

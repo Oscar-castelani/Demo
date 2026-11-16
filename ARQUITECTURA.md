@@ -26,7 +26,7 @@ src/
   services/   storage · application · team · task · deliverable · closure · dashboard · tour · entries
   context/    DemoContext
   hooks/      useDemo · useActiveUser · useDocumentTitle
-  data/       demoData · tools
+  data/       demoData · scenarios · tools
   types/      index
   utils/      labels · validation · applicationValidation · url
   styles/     variables · base · home · app · mobile
@@ -63,6 +63,10 @@ src/
 2. El reductor busca al actor y llama a la función del servicio correspondiente. Las acciones que crean a la persona (los formularios) no tienen actor.
 3. El servicio valida permisos y datos; si algo falla devuelve el mismo estado, sin cambios.
 4. Si el estado cambió, `DemoContext` lo guarda en `localStorage` y avisa si el guardado falla.
+
+## Escenarios
+
+`src/data/scenarios.ts` arma estados de la demo **con la misma lógica que usa la aplicación** (los servicios), avanzando paso a paso: postulación, revisión, proyecto abierto, perfiles, postulantes, equipo, tareas, entregables y cierre. Hay un escenario por paso de la guía (10 en total, con el proyecto finalizado). Todo queda marcado como simulado. `ScenarioPicker` lista los escenarios elegibles en el ingreso; el resto los usará el modo presentación.
 
 ## Guía del recorrido
 

@@ -24,7 +24,8 @@ Una guía muestra en cada momento cuál es el próximo paso y qué rol debe actu
 - Listado y detalle de proyectos, tablero de tareas, comentarios, entregables, actividad y cierre.
 - Panel de supervisión docente.
 - Sección de herramientas gratuitas con logos y enlaces.
-- Caso de ejemplo opcional, persistencia local y restablecimiento (la demo vuelve a estar vacía).
+- Caso de ejemplo opcional y **escenarios reproducibles** para probar una parte del recorrido (5 listados en el ingreso; 10 en total, uno por paso de la guía). Cada uno es ficticio, está marcado como simulado y pide confirmación antes de reemplazar lo cargado.
+- Persistencia local y restablecimiento (la demo vuelve a estar vacía).
 
 ## Alcance excluido
 

@@ -91,3 +91,12 @@ Estos recorridos se ejecutaron con un caso de ejemplo precargado (después reemp
 - No se probó con lectores de pantalla ni en dispositivos físicos; el control móvil usa la emulación del navegador.
 - El contraste se calculó sobre los colores definidos, no con una herramienta externa de auditoría.
 - Los cambios se conservan solo en el navegador y origen donde se hicieron.
+
+## Escenarios (M07)
+
+| Prueba | Resultado | Qué se verificó |
+|---|---|---|
+| Cada escenario coincide con su paso | Correcta | Los 10 escenarios dejan la guía exactamente en el paso que declaran (1 a 9 y finalizado) y todo lo cargado queda marcado como simulado |
+| Carga con y sin datos | Correcta | Sin datos carga directo; con datos pide confirmación y cancelar no cambia nada |
+| Seguir el recorrido desde un escenario | Correcta | Desde "Tareas esperando revisión" el docente pide correcciones (lo nuevo tiene fecha, lo cargado muestra "Dato simulado"); desde "Listo para cerrar" cierra el proyecto y la guía marca recorrido completo |
+| Móvil (375 px) | Correcta | El selector plegado y abierto no desborda |

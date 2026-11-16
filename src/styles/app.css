@@ -214,3 +214,9 @@ a.btn, button.btn { cursor: pointer; }
 .tools-group > summary { padding: 6px 0; border-bottom: 2px solid var(--sky-100); }
 .tools-group > summary h2, .tools-group > summary h3 { font-size: 1.1rem; color: var(--navy-900); }
 .tools-group[open] > summary { margin-bottom: 14px; }
+
+/* Escenarios */
+.scenario-box { margin-top: 14px; border: 1.5px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+.scenario-box > summary { cursor: pointer; font-weight: 800; }
+.scenario-box[open] > summary { margin-bottom: 8px; }
+.scenario-box .plain-list { margin-top: 10px; }

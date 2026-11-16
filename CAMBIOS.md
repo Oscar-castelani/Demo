@@ -138,3 +138,10 @@
 - El aviso de la cabecera ya no dice "datos simulados" (la demo arranca vacía): ahora aclara que los permisos son simulados, que lo cargado queda en el navegador y que no se usen datos personales reales.
 - Aviso visible en la bienvenida, en el ingreso y en cada formulario: es una demostración, no una postulación real, y no se deben cargar datos personales reales.
 - `GUIA_DE_LA_DEMO.md` suma el límite "no es una postulación real".
+
+## Escenarios reproducibles (M07)
+
+- Nuevo `src/data/scenarios.ts`: 10 escenarios (uno por paso de la guía, más el proyecto finalizado) construidos con los servicios de la aplicación, todo ficticio y marcado como simulado.
+- En el ingreso, `Escenarios para probar una parte del recorrido` (plegado por defecto) ofrece cinco: Proyecto recién postulado, Estudiantes postulados, Equipo armado sin tareas, Tareas esperando revisión y Listo para cerrar. Piden confirmación si hay datos y avisan que sigan la guía. El proyecto finalizado sigue en **Cargar ejemplo**.
+- Los demás escenarios (Proyecto aprobado y abierto, Estudiantes con perfil y Tareas listas sin entregables) no se listan: los usará el modo presentación (M01).
+- Lo que se hace después de cargar un escenario es real: tiene fecha y se distingue de lo simulado.

@@ -18,7 +18,7 @@ Un comercio presenta un proyecto, un docente lo revisa y arma un equipo de estud
 2. **Elegí un rol.** No se piden contraseñas.
 3. Comercios y estudiantes **completan un formulario** de postulación: ese formulario los identifica. Los docentes entran directo.
 4. Para cambiar de persona, usá **Cambiar usuario**. Lo cargado no se pierde.
-5. La demo **arranca vacía**. Para ver un caso armado, usá **Cargar ejemplo** en la pantalla de ingreso.
+5. La demo **arranca vacía**. Para ver un caso terminado, usá **Cargar ejemplo** en la pantalla de ingreso. Para probar **solo una parte** del recorrido sin hacer los pasos anteriores, abrí **Escenarios para probar una parte del recorrido** (más abajo, en la misma pantalla): *Proyecto recién postulado*, *Estudiantes postulados*, *Equipo armado, sin tareas*, *Tareas esperando revisión* y *Listo para cerrar*. Todos son ficticios, quedan marcados como simulados y piden confirmación si ya cargaste datos.
 6. **Restablecer demo** (arriba a la derecha) borra todo y vuelve a dejarla vacía. Pide confirmación.
 
 ### Guía del recorrido
