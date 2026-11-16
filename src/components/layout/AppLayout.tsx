@@ -23,7 +23,7 @@ export function AppLayout() {
     <div className="app-shell">
       <header className="app-header">
         <div className="app-header-inner">
-          <Link to="/app" className="app-brand">TUCE <span>Conecta</span></Link>
+          <Link to="/" className="app-brand" aria-label="TUCE Conecta: volver al inicio">TUCE <span>Conecta</span></Link>
           <nav aria-label="Principal" className="app-nav">
             <NavLink to="/app" end>Panel</NavLink>
             {user.role === 'student' && <NavLink to="/app/abiertos">Proyectos abiertos</NavLink>}

@@ -190,3 +190,4 @@
 - Panel del docente: con datos ilustrativos, los títulos dicen «(ejemplo)» en lugar de un número que parecía real.
 - Estudiante: tras postularse, un aviso explica qué pasa ahora (el docente revisa; si lo aceptan, el proyecto aparece en «Mis proyectos»).
 - Formulario del comercio: ejemplo y ayuda en «¿Qué resultado esperan?» y en «Tipo de ayuda».
+- El logo de la cabecera de la app vuelve a la página de inicio.
