@@ -1,6 +1,8 @@
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { PresentationBar } from './components/presentation/PresentationBar'
 import { AppLayout, RequireUser } from './components/layout/AppLayout'
 import { DemoProvider } from './context/DemoContext'
+import { PresentationProvider } from './context/PresentationContext'
 import { ApplicationsPage } from './pages/ApplicationsPage'
 import { ApplyBusinessPage } from './pages/ApplyBusinessPage'
 import { ApplyStudentPage } from './pages/ApplyStudentPage'
@@ -17,32 +19,35 @@ import { WelcomePage } from './pages/WelcomePage'
 export default function App() {
   return (
     <DemoProvider>
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<WelcomePage />} />
-          <Route path="/ingresar" element={<RoleSelectPage />} />
-          <Route path="/postular/comercio" element={<ApplyBusinessPage />} />
-          <Route path="/postular/estudiante" element={<ApplyStudentPage />} />
-          <Route
-            path="/app"
-            element={
-              <RequireUser>
-                <AppLayout />
-              </RequireUser>
-            }
-          >
-            <Route index element={<DashboardPage />} />
-            <Route path="postulaciones" element={<ApplicationsPage />} />
-            <Route path="abiertos" element={<OpenProjectsPage />} />
-            <Route path="equipos" element={<TeamsPage />} />
-            <Route path="herramientas" element={<ToolsPage />} />
-            <Route path="proyectos" element={<ProjectsPage />} />
-            <Route path="supervision" element={<SupervisionPage />} />
-            <Route path="proyectos/:projectId" element={<ProjectDetailPage />} />
-          </Route>
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </HashRouter>
+      <PresentationProvider>
+        <HashRouter>
+          <Routes>
+            <Route path="/" element={<WelcomePage />} />
+            <Route path="/ingresar" element={<RoleSelectPage />} />
+            <Route path="/postular/comercio" element={<ApplyBusinessPage />} />
+            <Route path="/postular/estudiante" element={<ApplyStudentPage />} />
+            <Route
+              path="/app"
+              element={
+                <RequireUser>
+                  <AppLayout />
+                </RequireUser>
+              }
+            >
+              <Route index element={<DashboardPage />} />
+              <Route path="postulaciones" element={<ApplicationsPage />} />
+              <Route path="abiertos" element={<OpenProjectsPage />} />
+              <Route path="equipos" element={<TeamsPage />} />
+              <Route path="herramientas" element={<ToolsPage />} />
+              <Route path="proyectos" element={<ProjectsPage />} />
+              <Route path="supervision" element={<SupervisionPage />} />
+              <Route path="proyectos/:projectId" element={<ProjectDetailPage />} />
+            </Route>
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+          <PresentationBar />
+        </HashRouter>
+      </PresentationProvider>
     </DemoProvider>
   )
 }

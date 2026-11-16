@@ -25,6 +25,7 @@ Una guía muestra en cada momento cuál es el próximo paso y qué rol debe actu
 - Panel de inicio del docente con la lista de estudiantes postulados (habilidades principales al pasar el mouse, enfocar con el teclado o tocar) y los equipos armados con su proyecto. Sin datos, muestra un ejemplo ilustrativo rotulado, que no se carga en la demo.
 - Panel de supervisión docente.
 - Sección de herramientas gratuitas con logos y enlaces.
+- **Dos caminos de entrada** (explorar un proyecto completo o crear uno desde cero) y **modo presentación** opcional de 9 pasos, con barra al pie (paso, rol, objetivo y persona ficticia), Anterior, Siguiente, Ir a la pantalla y Salir; se puede desactivar y funciona en escritorio y móvil.
 - Caso de ejemplo opcional y **escenarios reproducibles** para probar una parte del recorrido (5 listados en el ingreso; 10 en total, uno por paso de la guía). Cada uno es ficticio, está marcado como simulado y pide confirmación antes de reemplazar lo cargado.
 - Persistencia local y restablecimiento (la demo vuelve a estar vacía).
 

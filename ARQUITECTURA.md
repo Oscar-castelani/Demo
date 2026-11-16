@@ -26,7 +26,7 @@ src/
   services/   storage · application · team · task · deliverable · closure · dashboard · tour · entries
   context/    DemoContext
   hooks/      useDemo · useActiveUser · useDocumentTitle
-  data/       demoData · scenarios · tools
+  data/       demoData · scenarios · presentationSteps · tools
   types/      index
   utils/      labels · validation · applicationValidation · url
   styles/     variables · base · home · app · mobile
@@ -71,6 +71,10 @@ src/
 ## Escenarios
 
 `src/data/scenarios.ts` arma estados de la demo **con la misma lógica que usa la aplicación** (los servicios), avanzando paso a paso: postulación, revisión, proyecto abierto, perfiles, postulantes, equipo, tareas, entregables y cierre. Hay un escenario por paso de la guía (10 en total, con el proyecto finalizado). Todo queda marcado como simulado. `ScenarioPicker` lista los escenarios elegibles en el ingreso; el resto los usará el modo presentación.
+
+## Modo presentación
+
+`PresentationContext` guarda el paso activo (1 a 9 o ninguno) en `localStorage` como preferencia de pantalla: no es un dato de la demo y no se borra al restablecerla. `data/presentationSteps.ts` define los 9 pasos (título, rol, persona ficticia, objetivo y pantalla). `usePresentationActions` carga el escenario del paso (`scenarioForStep`), deja activa a la persona que corresponde y navega; en los pasos con formulario público deja activo al docente de demostración para que la pantalla protegida de origen no redirija al ingreso durante la navegación. `PresentationBar` es una barra `sticky` al final de la página (no tapa el contenido) y `PathCards` ofrece los dos caminos de entrada y el botón para activar el modo (con confirmación si hay datos).
 
 ## Guía del recorrido
 

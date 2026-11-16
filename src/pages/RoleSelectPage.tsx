@@ -4,7 +4,7 @@ import { TourBanner } from '../components/common/TourBanner'
 import { useDemo } from '../hooks/useDemo'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 import { WarningBanner } from '../components/common/WarningBanner'
-import { LoadExampleButton } from '../components/common/LoadExampleButton'
+import { PathCards } from '../components/common/PathCards'
 import { ScenarioPicker } from '../components/common/ScenarioPicker'
 import { ROLE_DESCRIPTIONS, ROLE_LABELS, ROLE_ORDER } from '../utils/labels'
 import type { Role } from '../types'
@@ -47,7 +47,9 @@ export function RoleSelectPage() {
         </p>
         <TourBanner />
 
-        <h2 className="step-title">1. Elegí un rol</h2>
+        <PathCards />
+
+        <h2 className="step-title">O elegí un rol directamente</h2>
         <div className="role-grid" role="group" aria-label="Roles disponibles">
           {ROLE_ORDER.map((r) => (
             <button
@@ -63,7 +65,7 @@ export function RoleSelectPage() {
           ))}
         </div>
 
-        <h2 className="step-title">2. {newLink ? 'Postulate o volvé a entrar' : 'Elegí un usuario'}</h2>
+        <h2 className="step-title">{newLink ? 'Postulate o volvé a entrar' : 'Elegí un usuario'}</h2>
         {role === null ? (
           <p className="empty">Primero elegí un rol.</p>
         ) : (
@@ -93,13 +95,6 @@ export function RoleSelectPage() {
           </>
         )}
 
-        <div className="example-box">
-          <div>
-            <strong>¿Querés ver un caso ya armado?</strong>
-            <p className="meta">Carga un ejemplo ficticio con equipo, tareas y entregables, todo marcado como simulado.</p>
-          </div>
-          <LoadExampleButton />
-        </div>
         <ScenarioPicker />
       </div>
     </main>

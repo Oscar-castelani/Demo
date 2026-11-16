@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDemo } from '../../hooks/useDemo'
 import { useActiveUser } from '../../hooks/useActiveUser'
+import { usePresentation } from '../../hooks/usePresentation'
 import { nextTourStep, TOUR_TOTAL } from '../../services/tourService'
 import { ROLE_LABELS } from '../../utils/labels'
 
@@ -30,6 +31,10 @@ export function TourBanner() {
   const user = useActiveUser()
   const [hidden, setHidden] = useState(readHidden)
   const step = nextTourStep(state)
+  const presenting = usePresentation().step !== null
+
+  // Durante la presentación, la barra inferior ya guía el recorrido.
+  if (presenting) return null
 
   if (hidden) {
     return (

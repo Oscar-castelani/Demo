@@ -109,3 +109,13 @@ Estos recorridos se ejecutaron con un caso de ejemplo precargado (después reemp
 | Habilidades en el nombre | Correcta | Oculto al inicio; visible con el mouse, el foco y el toque; se cierra al salir, con Escape y al volver a tocar; `aria-describedby` apunta al contenido. El foco real no se pudo probar porque la ventana del navegador de pruebas no tenía foco: se comprobó con eventos de foco |
 | Mezcla de datos reales e ilustrativos | Correcta | Con estudiantes postulados y sin equipo, los estudiantes son reales y el equipo ilustrativo; con equipo armado, todo es real y muestra proyecto, enlace, integrantes y coordinador |
 | Móvil (375 px) | Correcta | Los 5 nombres abren su habilidades dentro de la pantalla, sin desborde |
+
+## Dos caminos y modo presentación
+
+| Prueba | Resultado | Qué se verificó |
+|---|---|---|
+| Dos caminos de entrada | Correcta | Sin datos: "Empezar desde cero" va al formulario y "Cargar y explorar" carga el ejemplo. Con datos: ambos piden confirmación y cancelar no cambia nada; confirmar "desde cero" borra y va al formulario |
+| Los 9 pasos hacia adelante y hacia atrás | Correcta | En cada paso la guía coincide con el número, la persona activa es la prevista, la ruta es la esperada y la pantalla correcta; Anterior está deshabilitado en el paso 1 y el paso 9 ofrece Terminar |
+| Ir a la pantalla, Salir y persistencia | Correcta | Vuelve a la pantalla del paso sin cambiar datos; Salir quita la barra y conserva los datos; la barra sobrevive a recargar |
+| Confirmación al activar | Correcta | Con datos pide confirmación (cancelar no activa); confirmar activa el paso 1 con la demo vacía |
+| Móvil (375 px) | Correcta | Sin desborde en los pasos recorridos; barra de 148 px con el detalle plegado y de unos 267 px con el detalle abierto |

@@ -151,3 +151,10 @@
 - El panel de inicio del docente muestra **Estudiantes postulados** y **Equipos armados**. Cada nombre abre sus **habilidades principales** al pasar el mouse, al enfocarlo con el teclado (Escape lo cierra) o al tocarlo en el celular; también se anuncian a los lectores de pantalla.
 - La lista indica dónde está cada estudiante (en el equipo de un proyecto, postulado a un proyecto o con perfil sin proyecto). Cada equipo muestra el proyecto, el comercio, los integrantes, los lugares y quién coordina.
 - Si no hay estudiantes o equipos, se muestra un **ejemplo ilustrativo** rotulado (del caso ficticio), sin cargarlo en la demo, con un botón para cargar el ejemplo completo. Se reemplaza solo cuando hay datos reales. Se quitó el panel "Estudiantes participantes", que quedó incluido.
+
+## Dos caminos de entrada y modo presentación (M02 y M01)
+
+- La pantalla de ingreso ofrece dos caminos rotulados: **Explorar un proyecto completo** (carga el caso ficticio terminado) y **Crear un proyecto desde cero** (demo vacía y formulario del comercio). Con datos cargados piden confirmación; sin datos no hay nada que perder. Reemplazan al bloque "Cargar ejemplo" anterior. Los roles quedan debajo ("O elegí un rol directamente") y los escenarios, plegados al final.
+- **Modo presentación**: barra al pie con el paso (de 9), el rol que actúa, la persona ficticia, el objetivo y si el paso parte de un escenario simulado; Anterior, Siguiente, Ir a la pantalla y Salir (Terminar en el paso 9). Cada paso carga su escenario, deja activa a la persona correcta y lleva a la pantalla. Pide confirmación al activarse si hay datos; no vuelve a preguntar entre pasos. Se desactiva sin perder lo cargado, y la preferencia sobrevive a recargar la página.
+- Durante la presentación se oculta la guía normal del recorrido (la barra ya cumple esa función). En el celular el detalle del paso arranca plegado (barra de unos 150 px).
+- Corrección encontrada al probar: al volver de una pantalla protegida a un formulario público el sitio redirigía al ingreso; se resolvió dejando activo al docente de demostración en los pasos con formulario.
