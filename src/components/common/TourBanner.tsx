@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useDemo } from '../../hooks/useDemo'
 import { useActiveUser } from '../../hooks/useActiveUser'
 import { usePresentation } from '../../hooks/usePresentation'
@@ -27,7 +27,8 @@ function writeHidden(value: boolean) {
 
 /** Guía del recorrido: dice qué rol debería actuar ahora y lleva a esa pantalla. Se puede ocultar. */
 export function TourBanner() {
-  const { state } = useDemo()
+  const { state, dispatch } = useDemo()
+  const navigate = useNavigate()
   const user = useActiveUser()
   const [hidden, setHidden] = useState(readHidden)
   const step = nextTourStep(state)
@@ -47,6 +48,10 @@ export function TourBanner() {
   const isMyTurn = step !== null && user?.role === step.role
   // Los formularios de postulación son públicos: no hace falta ingresar antes.
   const goDirect = isMyTurn || (step?.to.startsWith('/postular') ?? false)
+  // Si ya hay alguien con el rol que toca, la guía cambia de usuario directamente (sin pasar por el ingreso).
+  const project = state.projects[state.projects.length - 1]
+  const sameRole = step ? state.users.filter((u) => u.role === step.role) : []
+  const candidate = sameRole.find((u) => project?.memberIds.includes(u.id)) ?? sameRole[0]
   return (
     <aside className="tour" aria-label="Guía del recorrido">
       <div className="tour-head">
@@ -58,9 +63,18 @@ export function TourBanner() {
         <>
           <p>{step.text}</p>
           <p className="meta">Le toca a: <strong>{ROLE_LABELS[step.role]}</strong>{isMyTurn ? ' (sos vos ahora)' : ''}</p>
-          <Link className="btn btn-primary btn-sm" to={goDirect ? step.to : `/ingresar?rol=${step.role}`}>
-            {goDirect ? step.cta : `Ingresar como ${ROLE_LABELS[step.role]}`}
-          </Link>
+          {goDirect ? (
+            <Link className="btn btn-primary btn-sm" to={step.to}>{step.cta}</Link>
+          ) : candidate ? (
+            <button type="button" className="btn btn-primary btn-sm" onClick={() => {
+              dispatch({ type: 'setActiveUser', userId: candidate.id })
+              navigate(step.to)
+            }}>
+              Ingresar como {candidate.name} y {step.cta.charAt(0).toLowerCase()}{step.cta.slice(1)}
+            </button>
+          ) : (
+            <Link className="btn btn-primary btn-sm" to={`/ingresar?rol=${step.role}`}>Ingresar como {ROLE_LABELS[step.role]}</Link>
+          )}
         </>
       ) : (
         <p>¡Recorrido completo! El proyecto está cerrado. Probá cargar otro comercio o restablecer la demo.</p>

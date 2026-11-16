@@ -31,9 +31,10 @@ export function ProjectInfoFields({ values, errors, onChange }: Props) {
         maxLength={650} rows={4} error={errors.description}
         hint="Contanos qué quieren lograr y qué tienen hoy." onChange={(v) => set('description', v)} />
       <TextArea label="¿Qué resultado esperan?" name="expectedResult" value={values.expectedResult} maxLength={650}
-        rows={3} error={errors.expectedResult} onChange={(v) => set('expectedResult', v)} />
+        rows={3} error={errors.expectedResult} placeholder="Ej.: un catálogo publicado y una forma simple de recibir pedidos"
+        hint="Opcional. Pensá qué te gustaría tener funcionando al terminar." onChange={(v) => set('expectedResult', v)} />
       <CheckGroup legend="Tipo de ayuda" name="helpTypes" required error={errors.helpTypes}
-        hint="Podés elegir más de una." selected={values.helpTypes}
+        hint="¿En qué necesitás que te ayuden los estudiantes? Podés elegir más de una." selected={values.helpTypes}
         options={HELP_TYPES.map((h) => ({ value: h, label: HELP_TYPE_LABELS[h] }))}
         onChange={(sel) => set('helpTypes', sel as HelpType[])} />
       <SelectField label="¿Para cuándo lo necesitan?" name="timeframe" value={values.timeframe} options={TIMEFRAMES}

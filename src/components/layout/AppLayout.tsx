@@ -4,6 +4,7 @@ import { useActiveUser } from '../../hooks/useActiveUser'
 import { ResetDemoButton } from '../common/ResetDemoButton'
 import { WarningBanner } from '../common/WarningBanner'
 import { TourBanner } from '../common/TourBanner'
+import { EvaluationLink } from '../common/EvaluationLink'
 import { ROLE_LABELS } from '../../utils/labels'
 
 /** Si no hay usuario elegido, lleva al selector. */
@@ -54,6 +55,7 @@ export function AppLayout() {
       <main className="app-main" tabIndex={-1}>
         <Outlet />
       </main>
+      <footer className="tour-wrap"><EvaluationLink /></footer>
     </div>
   )
 }

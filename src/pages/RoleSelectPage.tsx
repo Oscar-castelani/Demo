@@ -25,6 +25,14 @@ export function RoleSelectPage() {
     return state.users.find((u) => u.id === state.activeUserId)?.role ?? null
   })
 
+  // Si se llega con otro ?rol= estando en esta pantalla, el rol elegido lo acompaña.
+  const askedRole = params.get('rol') as Role | null
+  const [seenAsked, setSeenAsked] = useState(askedRole)
+  if (askedRole !== seenAsked) {
+    setSeenAsked(askedRole)
+    if (askedRole && ROLE_ORDER.includes(askedRole)) setRole(askedRole)
+  }
+
   const users = role ? state.users.filter((u) => u.role === role) : []
   const newLink = role ? NEW_LINKS[role] : undefined
 

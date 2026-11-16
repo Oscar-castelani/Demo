@@ -76,6 +76,12 @@ export function OpenProjectsPage() {
           <p>Elegí un proyecto y postulate. Un docente revisa las postulaciones y arma los equipos.</p>
         </section>
       )}
+      {mine.some((i) => i.status === 'pending') && (
+        <p className="notice" role="status">
+          <strong>Tu postulación está pendiente.</strong> Un docente la revisa y, si te acepta, el proyecto aparece en
+          «Mis proyectos». Podés ver el estado más abajo, en «Mis postulaciones a proyectos».
+        </p>
+      )}
       <p className="intro">Proyectos de comercios que ya aprobó un docente y buscan estudiantes.</p>
 
       {open.length === 0 ? (

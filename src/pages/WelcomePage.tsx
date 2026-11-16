@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { EvaluationLink } from '../components/common/EvaluationLink'
 import { ToolsGrid } from '../components/tools/ToolsGrid'
 import { SiteHeader, type NavItem } from '../components/layout/SiteHeader'
 import heroImg from '../assets/images/equipo-mesa-graficos.jpg'
@@ -189,6 +190,7 @@ export function WelcomePage() {
               no son una postulación real. No uses datos personales reales.
             </p>
             <Link className="btn btn-primary" to="/ingresar">Iniciar la demostración</Link>
+            <EvaluationLink />
           </div>
         </section>
 

@@ -30,7 +30,7 @@ export function nextTourStep(state: DemoState): TourStep | null {
       text: 'Un comercio presenta su proyecto. Ingresá como comercio y completá el formulario.' }
   }
   if (apps.some((a) => a.status === 'info_requested')) {
-    return { number: 2, role: 'business', to: '/app/postulaciones', cta: 'Responder al docente',
+    return { number: 2, role: 'business', to: '/app/postulaciones?responder=1', cta: 'Responder al docente',
       text: 'El docente pidió más información. Ingresá como comercio y respondé en la conversación.' }
   }
   if (apps.some((a) => a.status === 'received' || a.status === 'in_review')) {

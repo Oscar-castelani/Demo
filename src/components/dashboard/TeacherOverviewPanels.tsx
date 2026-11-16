@@ -22,7 +22,7 @@ export function TeacherOverviewPanels({ state, user }: DashboardProps) {
 
   return (
     <>
-      <Collapsible title={`Estudiantes postulados (${students.length})`} openOnMobile>
+      <Collapsible title={studentsIllustrative ? 'Estudiantes postulados (ejemplo)' : `Estudiantes postulados (${students.length})`} openOnMobile>
         {studentsIllustrative && <IllustrativeNote what="estudiantes postulados" />}
         <p className="meta">Pasá el mouse por el nombre (o tocalo) para ver sus habilidades principales.</p>
         <ul className="plain-list student-list">
@@ -38,7 +38,7 @@ export function TeacherOverviewPanels({ state, user }: DashboardProps) {
         )}
       </Collapsible>
 
-      <Collapsible title={`Equipos armados (${teams.length})`} openOnMobile>
+      <Collapsible title={teamsIllustrative ? 'Equipos armados (ejemplo)' : `Equipos armados (${teams.length})`} openOnMobile>
         {teamsIllustrative && <IllustrativeNote what="equipos armados" />}
         <div className="grid">
           {teams.map((t) => (

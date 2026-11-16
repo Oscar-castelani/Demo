@@ -57,6 +57,36 @@ function ProjectTeam({ project, user, skill }: { project: Project; user: User; s
         </label>
       )}
 
+      {/* Las postulaciones pendientes van primero: son lo que el docente tiene que atender. */}
+      <Collapsible title={`Postulaciones de estudiantes (${pending.length}${skill ? ` de ${pendingAll}` : ''})`} headingLevel={3} openOnMobile={pending.length > 0}>
+        {pending.length === 0 ? (
+          <p className="empty">No hay postulaciones pendientes{skill ? ' con esa habilidad' : ''}.</p>
+        ) : (
+          <ul className="plain-list">
+            {pending.map((i) => (
+              <li key={i.id}>
+                <strong>{nameOf(state, i.studentId)}</strong>
+                {i.message && <p>"{i.message}"</p>}
+                <StudentProfileSummary profile={profileOf(i.studentId)} />
+                {manage && (
+                  <div className="task-actions">
+                    <button type="button" className="btn btn-primary btn-sm" disabled={full || !active}
+                      onClick={() => send(`${nameOf(state, i.studentId)} se sumó al equipo.`, { type: 'respondToInterest', actorId: user.id, interestId: i.id, decision: 'accepted' })}>
+                      Aceptar
+                    </button>
+                    <button type="button" className="btn btn-outline btn-sm"
+                      onClick={() => send('Postulación no aceptada.', { type: 'respondToInterest', actorId: user.id, interestId: i.id, decision: 'declined' })}>
+                      No aceptar
+                    </button>
+                    {full && <span className="meta">No quedan lugares: ampliá el equipo para aceptar.</span>}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
+      </Collapsible>
+
       <Collapsible title={`Equipo (${project.memberIds.length} de ${project.maxMembers})`} headingLevel={3} openOnMobile>
         {project.memberIds.length === 0 ? (
           <p className="empty">Todavía no hay estudiantes en el equipo. Aceptá una postulación o sumá a alguien.</p>
@@ -92,35 +122,6 @@ function ProjectTeam({ project, user, skill }: { project: Project; user: User; s
               ))}
             </ul>
           </>
-        )}
-      </Collapsible>
-
-      <Collapsible title={`Postulaciones de estudiantes (${pending.length}${skill ? ` de ${pendingAll}` : ''})`} headingLevel={3} openOnMobile={pending.length > 0}>
-        {pending.length === 0 ? (
-          <p className="empty">No hay postulaciones pendientes{skill ? ' con esa habilidad' : ''}.</p>
-        ) : (
-          <ul className="plain-list">
-            {pending.map((i) => (
-              <li key={i.id}>
-                <strong>{nameOf(state, i.studentId)}</strong>
-                {i.message && <p>"{i.message}"</p>}
-                <StudentProfileSummary profile={profileOf(i.studentId)} />
-                {manage && (
-                  <div className="task-actions">
-                    <button type="button" className="btn btn-primary btn-sm" disabled={full || !active}
-                      onClick={() => send(`${nameOf(state, i.studentId)} se sumó al equipo.`, { type: 'respondToInterest', actorId: user.id, interestId: i.id, decision: 'accepted' })}>
-                      Aceptar
-                    </button>
-                    <button type="button" className="btn btn-outline btn-sm"
-                      onClick={() => send('Postulación no aceptada.', { type: 'respondToInterest', actorId: user.id, interestId: i.id, decision: 'declined' })}>
-                      No aceptar
-                    </button>
-                    {full && <span className="meta">No quedan lugares: ampliá el equipo para aceptar.</span>}
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
         )}
       </Collapsible>
 

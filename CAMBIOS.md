@@ -179,3 +179,14 @@
 - Nuevo botón **Descargar resumen (.md)** en el detalle del proyecto. Genera `resumen-<proyecto>.md` en el navegador (sin servidor) con datos generales, equipo y habilidades, avance, tareas, entregables, observaciones del docente y devoluciones del comercio, evaluación final y línea de tiempo.
 - Marca lo simulado como *(dato simulado)* sin fecha; lo hecho en la demo lleva fecha y hora. El estado de una tarea o entregable figura como simulado solo si su último movimiento lo es (corregido al probar: una tarea cambiada por una acción real aparecía como simulada). No incluye teléfonos ni correos.
 - Solo Markdown: el PDF requeriría una dependencia nueva.
+
+## Correcciones tras la prueba de usabilidad con personas (simulada)
+
+- La guía del recorrido cambia de usuario y lleva directo a la pantalla cuando ya hay alguien con el rol que toca (antes obligaba a pasar por el ingreso). El ingreso también respeta `?rol=` si ya estabas en esa pantalla.
+- "Responder al docente" lleva al campo de la conversación y le da el foco.
+- Postulaciones: los controles de decisión del docente van arriba de la conversación para que no se muevan al enviar un mensaje; el campo se llama "Mensaje del docente que acompaña tu decisión" para distinguirlo de "Agregar comentario".
+- Equipos: las postulaciones de estudiantes van primero.
+- Enlace a la encuesta de usabilidad (formulario externo de Google, sin datos personales) en la bienvenida y al pie de la app.
+- Panel del docente: con datos ilustrativos, los títulos dicen «(ejemplo)» en lugar de un número que parecía real.
+- Estudiante: tras postularse, un aviso explica qué pasa ahora (el docente revisa; si lo aceptan, el proyecto aparece en «Mis proyectos»).
+- Formulario del comercio: ejemplo y ayuda en «¿Qué resultado esperan?» y en «Tipo de ayuda».

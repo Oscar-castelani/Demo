@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { useDemo } from '../../hooks/useDemo'
 import { Collapsible } from '../common/Collapsible'
 import { CommentSection } from '../common/CommentSection'
@@ -48,8 +48,8 @@ function ReviewControls({ app, user }: { app: ProjectApplication; user: User }) 
   return (
     <div className="review-box">
       {needsNote && (
-        <TextArea label="Mensaje para el comercio" name="note" value={note} rows={3} maxLength={NOTE_MAX + 50}
-          error={error} hint="Obligatorio para pedir información o no aprobar; opcional al aprobar." onChange={setNote} />
+        <TextArea label="Mensaje del docente que acompaña tu decisión" name="note" value={note} rows={3} maxLength={NOTE_MAX + 50}
+          error={error} hint="Se envía junto con la decisión. Obligatorio para pedir información o no aprobar; opcional al aprobar." onChange={setNote} />
       )}
       {actions.includes('approve') && (
         <label className="field">
@@ -74,6 +74,7 @@ function ReviewControls({ app, user }: { app: ProjectApplication; user: User }) 
 /** Una postulación de comercio, vista por el propio comercio o por el docente. */
 export function ApplicationItem({ app, user }: { app: ProjectApplication; user: User }) {
   const { state, dispatch } = useDemo()
+  const [params] = useSearchParams()
   const business = state.businesses.find((b) => b.id === app.businessId)
   const stage = applicationStage(state, app)
   const isOwner = user.role === 'business' && app.applicantId === user.id
@@ -105,6 +106,9 @@ export function ApplicationItem({ app, user }: { app: ProjectApplication; user: 
       {canOpenProject && (
         <Link className="btn btn-outline btn-sm" to={`/app/proyectos/${app.projectId}`}>Ver el proyecto</Link>
       )}
+
+      {/* La decisión va arriba: así no se mueve cuando la conversación crece al enviar un mensaje. */}
+      {isReviewer && <ReviewControls app={app} user={user} />}
 
       <Collapsible title="Detalle de la postulación" headingLevel={3} className="sub-panel">
         <p>{app.description}</p>
@@ -139,13 +143,13 @@ export function ApplicationItem({ app, user }: { app: ProjectApplication; user: 
         <CommentSection
           comments={app.comments}
           label="Mensajes"
+          focusOnMount={isOwner && stage.waitingForBusiness && params.get('responder') === '1'}
           onAdd={isOwner || isReviewer
             ? (content) => dispatch({ type: 'addApplicationComment', actorId: user.id, applicationId: app.id, content })
             : null}
         />
       </Collapsible>
 
-      {isReviewer && <ReviewControls app={app} user={user} />}
     </article>
   )
 }

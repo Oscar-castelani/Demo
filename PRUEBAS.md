@@ -159,3 +159,32 @@ Recordatorio: los permisos son restricciones de la interfaz y de la lógica de u
 | Descarga sin servidor | Correcta | El botón genera un `Blob` con el nombre `resumen-catalogo-digital-de-productos.md` y avisa con un mensaje accesible; se interceptó la descarga para leer su contenido |
 | Privacidad | Correcta | El archivo no contiene teléfonos ni correos |
 | Límite | — | No se probó cómo abren el archivo distintos editores ni la descarga en celulares físicos |
+
+## Evaluación de usabilidad con personas (M04)
+
+**Qué es y qué no es.** Recorrí el sitio publicado en Chrome actuando como tres personas ficticias de las fichas del proyecto: Elena Martínez (docente voluntaria), Laura Giménez (estudiante) y Martín Alarcón (dueño de «Vivero Raíces»). Es una **simulación**: sirve para detectar problemas de uso, pero **no es evidencia de usuarios reales**. Las tres respuestas del formulario están rotuladas «Simulación con persona ficticia». Para el trabajo académico, conviene repetir la encuesta con personas reales.
+
+**Formulario externo (Google Forms):** «Prueba de usabilidad – TUCE Conecta (demo)». Preguntas: rol, tipo de respuesta (real o simulación), facilidad de uso (1 a 5), claridad del proceso (1 a 5), utilidad del seguimiento (1 a 5), dificultades y mejoras. El enlace está en la bienvenida y al pie de la app (`src/data/evaluation.ts`). No recibe datos de la aplicación.
+
+| Persona | Facilidad | Claridad | Utilidad |
+|---|---|---|---|
+| Elena (docente) | 4 | 5 | 5 |
+| Laura (estudiante) | 4 | 4 | 4 |
+| Martín (comercio) | 3 | 4 | 4 |
+
+**Recorrido completo:** el comercio postula; el docente comienza la revisión, pide información y aprueba con 2 lugares; la estudiante crea su perfil y se postula; el docente la acepta y la designa coordinadora.
+
+**Hallazgos y estado**
+
+| # | Hallazgo | Estado |
+|---|---|---|
+| 1 | El botón de la guía llevaba al ingreso sin cambiar de rol | Corregido |
+| 2 | En Equipos, «Aceptar» quedaba debajo de la pantalla | Corregido (postulaciones primero) |
+| 3 | El cuadro de mensaje del docente se movía al enviar un mensaje | Corregido (controles arriba) |
+| 4 | «Responder al docente» no llevaba al campo | Corregido (verificado: el foco queda en «Agregar comentario») |
+| 5 | Dos campos de mensaje parecidos para el docente | Corregido (etiqueta distinta) |
+| 6 | Título «(3)» en el panel ilustrativo | Corregido («(ejemplo)») |
+| 7 | La estudiante no veía el siguiente paso tras postularse | Corregido (aviso) |
+| 8 | El comercio no sabía qué escribir en resultado esperado y tipo de ayuda | Corregido (ejemplo y ayuda) |
+
+**Pendiente:** repetir con personas reales y con un lector de pantalla.

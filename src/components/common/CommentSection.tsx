@@ -1,4 +1,4 @@
-import { useId, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import type { FormEvent } from 'react'
 import { Stamp } from './Stamp'
 import { COMMENT_MAX, validateComment } from '../../utils/validation'
@@ -12,10 +12,21 @@ interface Props {
   label?: string
   /** Solo el formulario: los comentarios ya se muestran en una línea de tiempo. */
   formOnly?: boolean
+  /** Lleva la vista y el foco al campo al mostrarse (por ejemplo, cuando la guía pide responder). */
+  focusOnMount?: boolean
 }
 
-export function CommentSection({ comments, onAdd, label = 'Comentarios', formOnly = false }: Props) {
+export function CommentSection({ comments, onAdd, label = 'Comentarios', formOnly = false, focusOnMount = false }: Props) {
   const [text, setText] = useState('')
+  const fieldRef = useRef<HTMLTextAreaElement>(null)
+  useEffect(() => {
+    if (!focusOnMount) return
+    const t = setTimeout(() => {
+      fieldRef.current?.scrollIntoView({ block: 'center' })
+      fieldRef.current?.focus({ preventScroll: true })
+    }, 150) // después de que RouteFocus lleve el foco al título
+    return () => clearTimeout(t)
+  }, [focusOnMount])
   const [error, setError] = useState<string | undefined>()
   const errId = useId()
 
@@ -50,7 +61,7 @@ export function CommentSection({ comments, onAdd, label = 'Comentarios', formOnl
           <label className="field">
             <span>Agregar comentario</span>
             <textarea
-              rows={3} value={text} maxLength={COMMENT_MAX + 50} onChange={(e) => setText(e.target.value)}
+              ref={fieldRef} rows={3} value={text} maxLength={COMMENT_MAX + 50} onChange={(e) => setText(e.target.value)}
               aria-invalid={!!error} aria-describedby={error ? errId : undefined}
             />
             {error && <span id={errId} className="field-error" role="alert">{error}</span>}
