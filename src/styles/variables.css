@@ -1,0 +1,18 @@
+/* Paleta tomada de la imagen de referencia (valores estimados a ojo). */
+:root {
+  --navy-900: #0b2a6b;
+  --navy-700: #123a8a;
+  --teal-600: #0a8fb0;
+  --teal-700: #077892;
+  --sky-100: #d8eef8;
+  --sky-50: #eef8fc;
+  --white: #ffffff;
+  --text: #0b2a6b;
+  --text-muted: #3b4f7a;
+  --border: #e4eef5;
+  --radius: 14px;
+  --radius-lg: 24px;
+  --shadow: 0 10px 30px rgba(11, 42, 107, 0.12);
+  --font: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
+  --gutter: clamp(16px, 5vw, 88px);
+}

@@ -1,0 +1,136 @@
+/* Paneles plegables (todas las pantallas) */
+.collapsible > summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.collapsible > summary::-webkit-details-marker { display: none; }
+.collapsible > summary > h2, .collapsible > summary > h3 { margin: 0; }
+.collapsible > summary::after {
+  content: '+'; flex: none; width: 28px; height: 28px; display: grid; place-items: center;
+  border-radius: 50%; background: var(--sky-100); color: var(--navy-900); font-weight: 800; line-height: 1;
+}
+.collapsible[open] > summary::after { content: '–'; }
+.collapsible[open] > summary { margin-bottom: 14px; }
+.collapsible > summary:focus-visible { outline: 3px solid var(--teal-600); outline-offset: 4px; border-radius: 8px; }
+
+/* Celulares y pantallas angostas: se compacta tipografía, espacios y tablero */
+@media (max-width: 640px) {
+  html { scroll-padding-top: 64px; }
+  body { font-size: 15px; }
+
+  /* Encabezado de la bienvenida */
+  .site-header .container { min-height: 60px; gap: 12px; }
+  .brand { gap: 8px; }
+  .brand svg { width: 44px; height: 30px; }
+  .brand-name { font-size: 1.25rem; }
+  .nav { top: 60px; }
+  .nav-toggle { padding: 6px 12px; }
+
+  /* Bienvenida */
+  .hero { padding-block: 24px 28px; }
+  .hero .container { gap: 20px; }
+  .pill { font-size: 0.8rem; padding: 5px 12px; margin-bottom: 14px; }
+  .hero h1 { font-size: 1.55rem; }
+  .hero p.lead { font-size: 0.98rem; margin-top: 14px; }
+  .actions { gap: 10px; margin-top: 20px; }
+  .actions .btn { flex: 1 1 140px; justify-content: center; padding: 12px 14px; font-size: 0.95rem; gap: 8px; }
+  .hero-photo { max-height: 170px; }
+
+  .section { padding-block: 32px; }
+  .section h2 { font-size: 1.35rem; margin-bottom: 8px; }
+  .section .intro { margin-bottom: 20px; }
+  .grid { gap: 12px; grid-template-columns: 1fr; }
+  .card { padding: 14px 16px; }
+  .card h3 { font-size: 1.02rem; margin-bottom: 4px; }
+  .card .tag { margin-bottom: 8px; }
+
+  .how-intro { padding-left: 14px; margin-bottom: 22px; border-left-width: 4px; }
+  .how-intro h2 { font-size: 1.35rem; margin-bottom: 8px; }
+  .how-intro p { font-size: 0.95rem; }
+  .steps { gap: 12px; grid-template-columns: 1fr; }
+  .step {
+    display: grid; grid-template-columns: 84px 1fr; column-gap: 12px; align-items: start;
+    padding: 12px 12px 12px 14px;
+  }
+  .step-num { top: -8px; left: -6px; width: 30px; height: 30px; font-size: 1rem; border-width: 3px; }
+  .step-photo { grid-row: 1 / span 2; width: 84px; height: 84px; margin: 0; border-radius: 10px; }
+  .step h3 { font-size: 1rem; margin: 0 0 2px; }
+  .step p { font-size: 0.88rem; }
+  .site-footer { padding-block: 18px; font-size: 0.85rem; }
+
+  /* Selector de rol */
+  .select-page { padding: 14px 12px 24px; }
+  .select-card { padding: 18px 14px; border-radius: 18px; }
+  .select-card h1 { font-size: 1.5rem; margin: 8px 0 4px; }
+  .step-title { font-size: 1rem; margin: 20px 0 10px; }
+  .role-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .role-card { padding: 10px; gap: 4px; border-radius: 12px; }
+  .role-card strong { font-size: 0.92rem; }
+  .role-card span { font-size: 0.78rem; line-height: 1.3; }
+  .user-list .btn { width: 100%; justify-content: center; }
+
+  /* Estructura de la aplicación */
+  .app-header-inner { padding: 8px 12px; gap: 6px 12px; }
+  .app-brand { font-size: 1.2rem; }
+  .app-nav { flex-basis: 100%; order: 3; gap: 4px 16px; overflow-x: auto; white-space: nowrap; }
+  .app-nav a { padding: 6px 0; }
+  .app-user { width: 100%; gap: 6px; justify-content: space-between; }
+  .user-chip { margin-right: 0; flex: 1 1 100%; flex-direction: row; gap: 8px; align-items: baseline; }
+  .app-user .btn-sm { padding: 6px 10px; font-size: 0.82rem; flex: 1; }
+  .demo-ribbon { font-size: 0.75rem; padding: 4px 12px; }
+  .app-main { padding: 16px 12px 40px; }
+  .dashboard h1 { font-size: 1.35rem; }
+  .intro { font-size: 0.92rem; }
+  .btn-sm { padding: 7px 12px; font-size: 0.86rem; }
+
+  /* Paneles, tarjetas y etiquetas */
+  .panel { padding: 14px; margin-top: 12px; border-radius: 12px; }
+  .panel h2 { font-size: 1.02rem; margin-bottom: 10px; }
+  .collapsible > summary h2, .collapsible > summary h3 { font-size: 1rem; margin-bottom: 0; }
+  .panel h3 { font-size: 0.98rem; margin-bottom: 8px; }
+  .project-card h3 { font-size: 1rem; }
+  .project-title { font-size: 1.15rem; margin-top: 20px; }
+  .meta { font-size: 0.82rem; }
+  .plain-list { gap: 10px; }
+  .plain-list li { padding-bottom: 8px; }
+  .stat-row { grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 10px; }
+  .stat { padding: 8px 6px; align-items: center; text-align: center; border-radius: 10px; }
+  .stat-value { font-size: 1.3rem; }
+  .stat-label { font-size: 0.66rem; line-height: 1.2; }
+  .badge { font-size: 0.74rem; padding: 2px 8px; }
+
+  /* Pestañas del proyecto: una sola fila deslizable */
+  .tabs { flex-wrap: nowrap; overflow-x: auto; gap: 0; margin-top: 12px; scrollbar-width: none; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { flex: none; padding: 8px 12px; font-size: 0.9rem; white-space: nowrap; }
+
+  /* Tablero: columnas deslizables en horizontal en lugar de apiladas */
+  .board {
+    display: grid; grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 82%;
+    overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; padding-bottom: 8px; margin-top: 8px;
+  }
+  .column { scroll-snap-align: start; padding: 12px; min-height: 120px; }
+  .column h3 { margin-bottom: 10px; }
+  .task-card { padding: 10px; gap: 4px; }
+  .task-card strong { font-size: 0.92rem; }
+  .board-head { min-height: 0; }
+  .dashboard [role="tabpanel"] { margin-top: 12px !important; }
+  .board-hint { display: block; }
+
+  /* Entregables */
+  .stack { gap: 12px; }
+  .deliverable-head { margin-bottom: 4px; }
+  .deliverable-head h3 { font-size: 1rem; }
+  .review-box { padding: 10px; }
+
+  /* Diálogos casi a pantalla completa */
+  .dialog { padding: 16px; border-radius: 16px; }
+  .dialog-wide { width: calc(100vw - 16px); max-height: calc(100dvh - 16px); }
+  .dialog-head h2 { font-size: 1.1rem; }
+  .form { gap: 12px; }
+  .field input, .field textarea, .field select { padding: 8px 10px; }
+  .detail-sub { font-size: 0.98rem; margin: 14px 0 8px; }
+  .dialog-actions .btn { flex: 1; justify-content: center; }
+  .table th, .table td { padding: 8px 6px; font-size: 0.85rem; }
+}
+
+.board-hint { display: none; font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
