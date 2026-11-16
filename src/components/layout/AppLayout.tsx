@@ -47,7 +47,7 @@ export function AppLayout() {
             <ResetDemoButton />
           </div>
         </div>
-        <p className="demo-ribbon">Demostración con datos simulados. Los cambios se guardan solo en este navegador.</p>
+        <p className="demo-ribbon">Demostración: permisos simulados; lo cargado queda en este navegador. No uses datos reales.</p>
       </header>
       <WarningBanner />
       <div className="tour-wrap"><TourBanner /></div>

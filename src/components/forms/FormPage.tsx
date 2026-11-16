@@ -18,8 +18,8 @@ export function FormPage({ title, intro, children }: Props) {
         <h1>{title}</h1>
         <p className="intro">{intro}</p>
         <p className="notice" role="note">
-          <strong>Es una demostración.</strong> Lo que escribas se guarda solo en este navegador y no se envía a ningún
-          servidor. Te recomendamos usar datos ficticios.
+          <strong>Es una demostración, no una postulación real.</strong> Lo que escribas se guarda solo en este navegador
+          y no se envía a ningún servidor. No uses datos personales reales: usá datos ficticios.
         </p>
         {children}
       </div>

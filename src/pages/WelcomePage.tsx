@@ -184,6 +184,10 @@ export function WelcomePage() {
                 </article>
               ))}
             </div>
+            <p className="note" style={{ marginBottom: 20 }}>
+              Es una demostración: los permisos son simulados, lo que cargues queda solo en tu navegador y los formularios
+              no son una postulación real. No uses datos personales reales.
+            </p>
             <Link className="btn btn-primary" to="/ingresar">Iniciar la demostración</Link>
           </div>
         </section>

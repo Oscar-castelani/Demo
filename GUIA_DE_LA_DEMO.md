@@ -141,7 +141,8 @@ Todo el ejemplo es inventado: no hay personas, comercios ni proyectos reales. Lo
 
 ## 9. Límites de la demo
 
-- **Sin cuentas reales:** no hay contraseñas ni seguridad. Los permisos se simulan en la interfaz.
+- **No es una postulación real:** los formularios de comercios y estudiantes son parte de la demostración y no inscriben a nadie en ningún programa universitario. **No cargues datos personales reales**: usá datos ficticios. La demo lo recuerda en la bienvenida, en el ingreso, en cada formulario y en la cabecera.
+- **Sin cuentas reales:** no hay contraseñas ni seguridad. Los permisos se simulan en la interfaz y **no son controles de seguridad**.
 - **Sin servidor:** los datos viven solo en el navegador y el dispositivo donde se cargaron; no se comparten entre personas ni dispositivos.
 - **Sin archivos:** los entregables son enlaces externos; no se suben archivos.
 - **Sin avisos:** no hay correos, mensajes ni notificaciones.

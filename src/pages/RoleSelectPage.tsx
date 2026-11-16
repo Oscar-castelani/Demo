@@ -39,6 +39,11 @@ export function RoleSelectPage() {
         <Link to="/" className="back-link">← Volver al inicio</Link>
         <h1>Ingresar a la <span>demo</span></h1>
         <p className="intro">No se piden contraseñas. Elegí con qué rol querés recorrer la plataforma.</p>
+        <p className="notice" role="note">
+          <strong>Es una demostración.</strong> Los permisos son simulados, lo que cargues queda solo en este navegador
+          y los formularios <strong>no son una postulación real</strong> a ningún programa universitario. No uses datos
+          personales reales.
+        </p>
         <TourBanner />
 
         <h2 className="step-title">1. Elegí un rol</h2>

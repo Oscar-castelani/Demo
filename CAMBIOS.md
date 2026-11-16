@@ -131,3 +131,10 @@
 ## Herramientas: Figma
 
 - Se agregó **Figma** a la categoría **Diseño**, junto con Canva (plan gratuito, con logo oficial de `simple-icons` y enlace seguro). La sección pasa a tener 12 herramientas.
+
+## Documentación y avisos (M09 y M08 del documento de mejoras)
+
+- `README.md` reescrito y ordenado: enlace a la demo en línea (verificado, responde 200), aviso de que es una demostración y no una postulación real, tabla de rutas completa (postulaciones, proyectos abiertos, equipos, supervisión, herramientas y los dos formularios), roles y documentación.
+- El aviso de la cabecera ya no dice "datos simulados" (la demo arranca vacía): ahora aclara que los permisos son simulados, que lo cargado queda en el navegador y que no se usen datos personales reales.
+- Aviso visible en la bienvenida, en el ingreso y en cada formulario: es una demostración, no una postulación real, y no se deben cargar datos personales reales.
+- `GUIA_DE_LA_DEMO.md` suma el límite "no es una postulación real".
