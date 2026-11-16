@@ -3,14 +3,14 @@ import { Stamp } from '../common/Stamp'
 import { StatusCounts } from '../common/StatusCounts'
 import { ProjectSummaryCard } from '../projects/ProjectSummaryCard'
 import {
-  countByStatus, nameOf, pendingDeliverableReviews, projectsForUser, recentActivity, tasksOfProjects,
+  countByStatus, pendingDeliverableReviews, projectsForUser, recentActivity, tasksOfProjects,
 } from '../../services/dashboardService'
+import { TeacherOverviewPanels } from './TeacherOverviewPanels'
 import { Empty, Panel, type DashboardProps } from './shared'
 
 export function SupervisorDashboard({ state, user }: DashboardProps) {
   const projects = projectsForUser(state, user)
   const tasks = tasksOfProjects(state, projects)
-  const students = [...new Set(projects.flatMap((p) => p.memberIds))]
   const pending = pendingDeliverableReviews(state, projects)
   const activity = recentActivity(state, projects)
 
@@ -25,6 +25,7 @@ export function SupervisorDashboard({ state, user }: DashboardProps) {
         </Link>
         <Link className="btn btn-outline" to="/app/supervision">Abrir panel de supervisión</Link>
       </div>
+      <TeacherOverviewPanels state={state} user={user} />
       <Panel title="Proyectos supervisados">
         {projects.length === 0 ? <Empty>No supervisás proyectos.</Empty> : (
           <div className="grid">
@@ -34,11 +35,6 @@ export function SupervisorDashboard({ state, user }: DashboardProps) {
       </Panel>
       <Panel title="Tareas por estado" openOnMobile>
         <StatusCounts counts={countByStatus(tasks)} />
-      </Panel>
-      <Panel title="Estudiantes participantes">
-        {students.length === 0 ? <Empty>Sin estudiantes.</Empty> : (
-          <ul className="plain-list">{students.map((id) => <li key={id}>{nameOf(state, id)}</li>)}</ul>
-        )}
       </Panel>
       <Panel title="Entregables pendientes de revisión" openOnMobile>
         {pending.length === 0 ? <Empty>No hay entregables pendientes de revisión.</Empty> : (

@@ -220,3 +220,23 @@ a.btn, button.btn { cursor: pointer; }
 .scenario-box > summary { cursor: pointer; font-weight: 800; }
 .scenario-box[open] > summary { margin-bottom: 8px; }
 .scenario-box .plain-list { margin-top: 10px; }
+
+/* Habilidades al pasar el mouse */
+.skills-hover { position: relative; display: inline-block; }
+.name-trigger {
+  background: none; border: 0; padding: 0; font: inherit; font-weight: 800; color: var(--navy-900);
+  text-decoration: underline dotted var(--teal-600); text-underline-offset: 4px; cursor: help;
+}
+.name-trigger:hover, .name-trigger[aria-expanded="true"] { color: var(--teal-700); }
+.skills-pop {
+  position: absolute; z-index: 20; left: 0; top: calc(100% + 6px); width: max-content; max-width: min(300px, 80vw);
+  display: grid; gap: 6px; background: var(--white); color: var(--text); border: 2px solid var(--teal-600);
+  border-radius: 12px; padding: 10px 12px; box-shadow: var(--shadow); font-size: 0.88rem;
+}
+.skills-pop[hidden] { display: none; }
+.skills-pop .chips { margin: 0; }
+.chip-more { background: var(--white); border: 1px dashed var(--navy-900); }
+.student-list li { display: block; }
+.team-card h3 { font-size: 1.05rem; margin: 8px 0 4px; }
+.team-card .plain-list { margin-top: 10px; gap: 8px; }
+.team-card .plain-list li { padding-bottom: 6px; }

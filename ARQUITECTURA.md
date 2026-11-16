@@ -64,6 +64,10 @@ src/
 3. El servicio valida permisos y datos; si algo falla devuelve el mismo estado, sin cambios.
 4. Si el estado cambió, `DemoContext` lo guarda en `localStorage` y avisa si el guardado falla.
 
+## Panel del docente
+
+`teacherOverview(state, user)` (`src/services/teacherOverview.ts`) calcula las filas de **estudiantes** (con su situación) y de **equipos** (proyecto, comercio, integrantes, coordinador). Si no hay estudiantes o equipos reales, completa con los del caso de ejemplo y lo indica (`studentsIllustrative`, `teamsIllustrative`); esos datos no se guardan. `SkillsHover` muestra las habilidades en un `role="tooltip"` que se abre con el mouse, el foco o el toque, se cierra con Escape y se anuncia con `aria-describedby`.
+
 ## Escenarios
 
 `src/data/scenarios.ts` arma estados de la demo **con la misma lógica que usa la aplicación** (los servicios), avanzando paso a paso: postulación, revisión, proyecto abierto, perfiles, postulantes, equipo, tareas, entregables y cierre. Hay un escenario por paso de la guía (10 en total, con el proyecto finalizado). Todo queda marcado como simulado. `ScenarioPicker` lista los escenarios elegibles en el ingreso; el resto los usará el modo presentación.

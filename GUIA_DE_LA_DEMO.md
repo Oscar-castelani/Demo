@@ -73,6 +73,7 @@ Un cuadro verde indica **en qué paso va la demo (de 9), qué rol tiene que actu
 **Cómo entra:** directo, sin formulario.
 
 **Qué puede hacer:**
+- **Panel de inicio:** al entrar ve la lista de **estudiantes postulados**, con dónde está cada uno (en un equipo, postulado a un proyecto o solo con perfil). **Pasando el mouse por el nombre** (o tocándolo en el celular, o con el teclado) aparecen sus **habilidades principales**. Debajo ve los **equipos armados**, con el nombre del proyecto, el comercio, los integrantes y quién coordina. Si todavía no hay estudiantes o equipos, el panel muestra un **ejemplo ilustrativo** rotulado como tal, sin cargarlo en la demo.
 - **Postulaciones:** revisar los proyectos de los comercios con filtro por estado. Puede **comenzar la revisión**, **pedir más información** (mensaje obligatorio), **aprobar** (se crea el proyecto y se elige cuántos estudiantes lo formarán, de 1 a 5) o **no aprobar** (mensaje obligatorio). Conversa con el comercio.
 - **Equipos:** ver los perfiles de los estudiantes con **filtro por habilidad**; **aceptar o no aceptar** postulaciones; **sumar** a un estudiante directamente; **quitar** a alguien del equipo (sus tareas quedan sin responsable); **designar quién coordina**; y cambiar la cantidad de lugares (1 a 6).
 - **Proyectos:**

@@ -22,6 +22,7 @@ Una guía muestra en cada momento cuál es el próximo paso y qué rol debe actu
 - Seguimiento de la postulación del comercio en 6 etapas y conversación con el docente.
 - Revisión de postulaciones, proyectos abiertos, armado de equipos y coordinación.
 - Listado y detalle de proyectos, tablero de tareas, comentarios, entregables, actividad y cierre.
+- Panel de inicio del docente con la lista de estudiantes postulados (habilidades principales al pasar el mouse, enfocar con el teclado o tocar) y los equipos armados con su proyecto. Sin datos, muestra un ejemplo ilustrativo rotulado, que no se carga en la demo.
 - Panel de supervisión docente.
 - Sección de herramientas gratuitas con logos y enlaces.
 - Caso de ejemplo opcional y **escenarios reproducibles** para probar una parte del recorrido (5 listados en el ingreso; 10 en total, uno por paso de la guía). Cada uno es ficticio, está marcado como simulado y pide confirmación antes de reemplazar lo cargado.

@@ -100,3 +100,12 @@ Estos recorridos se ejecutaron con un caso de ejemplo precargado (después reemp
 | Carga con y sin datos | Correcta | Sin datos carga directo; con datos pide confirmación y cancelar no cambia nada |
 | Seguir el recorrido desde un escenario | Correcta | Desde "Tareas esperando revisión" el docente pide correcciones (lo nuevo tiene fecha, lo cargado muestra "Dato simulado"); desde "Listo para cerrar" cierra el proyecto y la guía marca recorrido completo |
 | Móvil (375 px) | Correcta | El selector plegado y abierto no desborda |
+
+## Panel del docente
+
+| Prueba | Resultado | Qué se verificó |
+|---|---|---|
+| Docente con la demo vacía | Correcta | Ve 3 estudiantes y 1 equipo de ejemplo rotulados como ilustrativos; el estado guardado sigue vacío |
+| Habilidades en el nombre | Correcta | Oculto al inicio; visible con el mouse, el foco y el toque; se cierra al salir, con Escape y al volver a tocar; `aria-describedby` apunta al contenido. El foco real no se pudo probar porque la ventana del navegador de pruebas no tenía foco: se comprobó con eventos de foco |
+| Mezcla de datos reales e ilustrativos | Correcta | Con estudiantes postulados y sin equipo, los estudiantes son reales y el equipo ilustrativo; con equipo armado, todo es real y muestra proyecto, enlace, integrantes y coordinador |
+| Móvil (375 px) | Correcta | Los 5 nombres abren su habilidades dentro de la pantalla, sin desborde |

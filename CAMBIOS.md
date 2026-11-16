@@ -145,3 +145,9 @@
 - En el ingreso, `Escenarios para probar una parte del recorrido` (plegado por defecto) ofrece cinco: Proyecto recién postulado, Estudiantes postulados, Equipo armado sin tareas, Tareas esperando revisión y Listo para cerrar. Piden confirmación si hay datos y avisan que sigan la guía. El proyecto finalizado sigue en **Cargar ejemplo**.
 - Los demás escenarios (Proyecto aprobado y abierto, Estudiantes con perfil y Tareas listas sin entregables) no se listan: los usará el modo presentación (M01).
 - Lo que se hace después de cargar un escenario es real: tiene fecha y se distingue de lo simulado.
+
+## Panel del docente: estudiantes y equipos
+
+- El panel de inicio del docente muestra **Estudiantes postulados** y **Equipos armados**. Cada nombre abre sus **habilidades principales** al pasar el mouse, al enfocarlo con el teclado (Escape lo cierra) o al tocarlo en el celular; también se anuncian a los lectores de pantalla.
+- La lista indica dónde está cada estudiante (en el equipo de un proyecto, postulado a un proyecto o con perfil sin proyecto). Cada equipo muestra el proyecto, el comercio, los integrantes, los lugares y quién coordina.
+- Si no hay estudiantes o equipos, se muestra un **ejemplo ilustrativo** rotulado (del caso ficticio), sin cargarlo en la demo, con un botón para cargar el ejemplo completo. Se reemplaza solo cuando hay datos reales. Se quitó el panel "Estudiantes participantes", que quedó incluido.
