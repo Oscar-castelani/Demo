@@ -173,3 +173,9 @@
 - Nuevo `SkipLink` ("Saltar al contenido"), `RouteFocus` (foco al título al cambiar de ruta) y patrón de pestañas con flechas, Inicio y Fin; los `<main>` pasan a ser enfocables por código.
 - Contraste: 16 combinaciones de colores en uso, todas por encima de los mínimos WCAG; el turquesa claro solo se usa en texto grande o decorativo.
 - Matriz de permisos a nivel de lógica (sin pasar por la interfaz): 56 acciones probadas por rol, todas con el resultado esperado.
+
+## Resumen exportable en Markdown (M06)
+
+- Nuevo botón **Descargar resumen (.md)** en el detalle del proyecto. Genera `resumen-<proyecto>.md` en el navegador (sin servidor) con datos generales, equipo y habilidades, avance, tareas, entregables, observaciones del docente y devoluciones del comercio, evaluación final y línea de tiempo.
+- Marca lo simulado como *(dato simulado)* sin fecha; lo hecho en la demo lleva fecha y hora. El estado de una tarea o entregable figura como simulado solo si su último movimiento lo es (corregido al probar: una tarea cambiada por una acción real aparecía como simulada). No incluye teléfonos ni correos.
+- Solo Markdown: el PDF requeriría una dependencia nueva.

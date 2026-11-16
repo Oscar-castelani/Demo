@@ -23,7 +23,7 @@ src/
   components/ common · layout · applications · forms · teams · projects · tasks · deliverables · dashboard · tools
   pages/      Welcome · RoleSelect · ApplyBusiness · ApplyStudent · Dashboard · Applications · OpenProjects
               Teams · Projects · ProjectDetail · Supervision · Tools
-  services/   storage · application · team · task · deliverable · closure · dashboard · alerts · timeline · tour · entries
+  services/   storage · application · team · task · deliverable · closure · dashboard · alerts · timeline · export · tour · entries
   context/    DemoContext
   hooks/      useDemo · useActiveUser · useDocumentTitle
   data/       demoData · scenarios · presentationSteps · tools
@@ -63,6 +63,10 @@ src/
 2. El reductor busca al actor y llama a la función del servicio correspondiente. Las acciones que crean a la persona (los formularios) no tienen actor.
 3. El servicio valida permisos y datos; si algo falla devuelve el mismo estado, sin cambios.
 4. Si el estado cambió, `DemoContext` lo guarda en `localStorage` y avisa si el guardado falla.
+
+## Exportación
+
+`exportService.projectSummaryMarkdown(state, project)` es una función pura que arma el resumen en Markdown solo con datos del estado. Una tarea o un entregable se marca como simulado únicamente si su último movimiento lo es (si alguien lo cambió en la demo, ya es real); los comentarios y eventos simulados se muestran sin fecha. `downloadMarkdown` crea un `Blob` y simula el clic en un enlace `download`, sin servidor. No se exportan teléfonos ni correos.
 
 ## Teclado y foco
 

@@ -148,3 +148,14 @@ Pruebas con teclas reales en el navegador de pruebas, más cálculos y verificac
 Recordatorio: los permisos son restricciones de la interfaz y de la lógica de una demostración; **no son controles de seguridad**, porque todo corre en el navegador de la persona.
 
 **Límites de esta verificación:** no se probó con un lector de pantalla real (NVDA, VoiceOver, TalkBack) ni en celulares físicos, y el contraste se calculó sobre los colores definidos, no con una herramienta externa.
+
+## Resumen exportable (M06)
+
+| Prueba | Resultado | Qué se verificó |
+|---|---|---|
+| Coincide con el estado | Correcta | En un escenario con una acción real: 4 tareas en el archivo y 4 en la demo, mismos estados en el mismo orden, avance 1 de 4 (25 %), fecha vencida y tarea sin responsable visibles |
+| Lo simulado y lo real | Correcta | Lo precargado figura como dato simulado sin fecha (10 registros); la observación y el cambio de estado hechos durante la prueba llevan fecha y hora; la tarea cambiada ya no figura como simulada |
+| Caso de ejemplo | Correcta | 8 de 8 tareas, equipo con habilidades y coordinador, 2 entregables con su enlace, evaluación final marcada como simulada, observaciones y devoluciones con su autor; sin fechas inventadas en la línea de tiempo |
+| Descarga sin servidor | Correcta | El botón genera un `Blob` con el nombre `resumen-catalogo-digital-de-productos.md` y avisa con un mensaje accesible; se interceptó la descarga para leer su contenido |
+| Privacidad | Correcta | El archivo no contiene teléfonos ni correos |
+| Límite | — | No se probó cómo abren el archivo distintos editores ni la descarga en celulares físicos |

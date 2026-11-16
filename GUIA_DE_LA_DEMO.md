@@ -113,6 +113,15 @@ Un cuadro verde indica **en qué paso va la demo (de 9), qué rol tiene que actu
 | Supervisión | Docente | Panel de seguimiento |
 | Herramientas | Todos | Herramientas gratuitas con logo, uso y enlace |
 
+## 4 ter. Descargar el resumen de un proyecto
+
+En el detalle de cada proyecto, el botón **Descargar resumen (.md)** baja un archivo de texto en formato Markdown, sin servidor y para cualquier rol que pueda ver el proyecto. Incluye: datos generales, equipo con sus habilidades, avance, tareas, entregables con su enlace, observaciones del docente y devoluciones del comercio, evaluación final y la línea de tiempo.
+
+- Coincide con lo que muestra la demo en ese momento y no agrega nada que no exista.
+- Lo ficticio queda marcado como *(dato simulado)* y sin fecha; lo hecho durante la demo lleva fecha y hora.
+- No incluye teléfonos ni correos.
+- Si todavía no hay tareas, entregables o evaluación, el archivo lo dice.
+
 ## 4 bis. Línea de tiempo
 
 Cada **tarea**, cada **entregable** y la pestaña **Actividad** del proyecto muestran una **línea de tiempo** que cuenta la historia en orden: por ejemplo, un entregable se *registra*, el comercio *solicita modificaciones* y deja su devolución, el equipo lo *vuelve a enviar* y el comercio lo *aprueba*. Cada movimiento dice quién lo hizo y su rol, y se distingue con texto y forma:

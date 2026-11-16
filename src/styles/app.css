@@ -289,3 +289,6 @@ a.btn, button.btn { cursor: pointer; }
 .timeline-body p { margin: 0; }
 .timeline-body .timeline-head { margin-bottom: 2px; }
 @media (max-width: 640px) { .timeline-item { padding-bottom: 8px; } }
+
+/* Exportar resumen */
+.export-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 10px; }

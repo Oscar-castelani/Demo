@@ -3,6 +3,7 @@ import type { KeyboardEvent } from 'react'
 import { Collapsible } from '../components/common/Collapsible'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { ClosurePanel } from '../components/projects/ClosurePanel'
+import { downloadMarkdown, projectSummaryMarkdown, summaryFileName } from '../services/exportService'
 import { useDemo } from '../hooks/useDemo'
 import { useActiveUser } from '../hooks/useActiveUser'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
@@ -31,6 +32,7 @@ export function ProjectDetailPage() {
   const [params] = useSearchParams()
   const requested = params.get('tab') as Tab | null
   const [tab, setTab] = useState<Tab>(requested && TAB_IDS.includes(requested) ? requested : 'summary')
+  const [exported, setExported] = useState(false)
   const project = user ? projectsForUser(state, user).find((p) => p.id === projectId) : undefined
   useDocumentTitle(project ? project.title : 'Proyecto no disponible')
   if (!user) return null
@@ -65,6 +67,21 @@ export function ProjectDetailPage() {
     <div className="dashboard">
       <Link to="/app/proyectos" className="back-link">← Proyectos</Link>
       <h1>{project.title}</h1>
+      <div className="export-row">
+        <button
+          type="button"
+          className="btn btn-outline btn-sm"
+          onClick={() => {
+            downloadMarkdown(summaryFileName(project), projectSummaryMarkdown(state, project))
+            setExported(true)
+          }}
+        >
+          Descargar resumen (.md)
+        </button>
+        <span className="meta" role="status" aria-live="polite">
+          {exported ? `Se descargó ${summaryFileName(project)}. Incluye solo lo que muestra la demo; lo simulado está marcado.` : ''}
+        </span>
+      </div>
 
       <div role="tablist" aria-label="Secciones del proyecto" className="tabs" onKeyDown={onTabsKey}>
         {TABS.map((t) => (
