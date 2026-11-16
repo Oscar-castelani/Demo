@@ -10,9 +10,11 @@ interface Props {
   /** Si es null, la persona puede leer pero no comentar. */
   onAdd: ((content: string) => void) | null
   label?: string
+  /** Solo el formulario: los comentarios ya se muestran en una línea de tiempo. */
+  formOnly?: boolean
 }
 
-export function CommentSection({ comments, onAdd, label = 'Comentarios' }: Props) {
+export function CommentSection({ comments, onAdd, label = 'Comentarios', formOnly = false }: Props) {
   const [text, setText] = useState('')
   const [error, setError] = useState<string | undefined>()
   const errId = useId()
@@ -28,8 +30,8 @@ export function CommentSection({ comments, onAdd, label = 'Comentarios' }: Props
 
   return (
     <div className="comments">
-      <h3 className="detail-sub">{label} ({comments.length})</h3>
-      {comments.length === 0 ? (
+      {!formOnly && <h3 className="detail-sub">{label} ({comments.length})</h3>}
+      {formOnly ? null : comments.length === 0 ? (
         <p className="empty">Todavía no hay comentarios.</p>
       ) : (
         <ul className="plain-list">

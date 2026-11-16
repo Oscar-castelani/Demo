@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { Modal } from '../common/Modal'
 import { StatusBadge, ReviewBadge } from '../common/Badges'
 import { CommentSection } from '../common/CommentSection'
-import { Stamp } from '../common/Stamp'
+import { Timeline } from '../common/Timeline'
+import { entityTimeline } from '../../services/timelineService'
 import {
   allowedStatuses, canCommentOnTask, canEditTask, observationRequired, transitionLabel,
 } from '../../services/taskService'
 import { validateComment } from '../../utils/validation'
 import { canRegisterDeliverable } from '../../services/deliverableService'
 import { nameOf } from '../../services/dashboardService'
-import { ROLE_LABELS } from '../../utils/labels'
 import { isSafeUrl } from '../../utils/url'
 import type { DemoState, Project, Task, TaskStatus, User } from '../../types'
 
@@ -120,23 +120,13 @@ export function TaskDetailDialog({ state, user, project, task, onClose, onEdit, 
             </button>
           )}
 
+          <h3 className="detail-sub">Línea de tiempo ({entityTimeline(task.history, task.comments).length})</h3>
+          <Timeline items={entityTimeline(task.history, task.comments)} empty="Todavía no hay movimientos." />
           <CommentSection
             comments={task.comments}
+            formOnly
             onAdd={canCommentOnTask(user, project) ? onComment : null}
           />
-
-          <h3 className="detail-sub">Historial de cambios</h3>
-          {task.history.length === 0 ? (
-            <p className="empty">Todavía no hay cambios registrados.</p>
-          ) : (
-            <ul className="plain-list">
-              {[...task.history].reverse().map((h) => (
-                <li key={h.id}>
-                  {h.actorName} ({ROLE_LABELS[h.actorRole]}): {h.action} · <Stamp simulated={h.simulated} iso={h.createdAt} />
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
       )}
     </Modal>

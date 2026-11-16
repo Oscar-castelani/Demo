@@ -80,6 +80,7 @@ Un cuadro verde indica **en qué paso va la demo (de 9), qué rol tiene que actu
 
 **Qué puede hacer:**
 - **Panel de inicio:** al entrar ve la lista de **estudiantes postulados**, con dónde está cada uno (en un equipo, postulado a un proyecto o solo con perfil). **Pasando el mouse por el nombre** (o tocándolo en el celular, o con el teclado) aparecen sus **habilidades principales**. Debajo ve los **equipos armados**, con el nombre del proyecto, el comercio, los integrantes y quién coordina. Si todavía no hay estudiantes o equipos, el panel muestra un **ejemplo ilustrativo** rotulado como tal, sin cargarlo en la demo.
+- **Alertas** (en el panel de inicio y en Supervisión): lo que requiere atención, con un enlace a la tarea o a los entregables. Son cuatro tipos: **tareas vencidas** (con fecha límite pasada y sin finalizar), **entregables con cambios solicitados**, **tareas esperando revisión** y **tareas sin responsable**. Se calculan solo con datos que existen (fecha límite, responsable y estados) y se actualizan después de cada acción. Si no hay ninguna, lo dice.
 - **Postulaciones:** revisar los proyectos de los comercios con filtro por estado. Puede **comenzar la revisión**, **pedir más información** (mensaje obligatorio), **aprobar** (se crea el proyecto y se elige cuántos estudiantes lo formarán, de 1 a 5) o **no aprobar** (mensaje obligatorio). Conversa con el comercio.
 - **Equipos:** ver los perfiles de los estudiantes con **filtro por habilidad**; **aceptar o no aceptar** postulaciones; **sumar** a un estudiante directamente; **quitar** a alguien del equipo (sus tareas quedan sin responsable); **designar quién coordina**; y cambiar la cantidad de lugares (1 a 6).
 - **Proyectos:**
@@ -111,6 +112,14 @@ Un cuadro verde indica **en qué paso va la demo (de 9), qué rol tiene que actu
 | Proyectos | Según el rol | Listado y detalle con Resumen, Tablero, Entregables, Actividad y Cierre |
 | Supervisión | Docente | Panel de seguimiento |
 | Herramientas | Todos | Herramientas gratuitas con logo, uso y enlace |
+
+## 4 bis. Línea de tiempo
+
+Cada **tarea**, cada **entregable** y la pestaña **Actividad** del proyecto muestran una **línea de tiempo** que cuenta la historia en orden: por ejemplo, un entregable se *registra*, el comercio *solicita modificaciones* y deja su devolución, el equipo lo *vuelve a enviar* y el comercio lo *aprueba*. Cada movimiento dice quién lo hizo y su rol, y se distingue con texto y forma:
+- **Evento:** lo registra la plataforma automáticamente (cambios de estado, altas, revisiones).
+- **Comentario:** lo escribe una persona (observaciones, devoluciones, mensajes).
+
+Los movimientos de los escenarios y del ejemplo muestran "Dato simulado" en lugar de una fecha; los que se hacen durante la demo llevan fecha y hora. En la pestaña **Actividad** se ve lo más nuevo primero; en cada tarea y entregable, lo más antiguo primero.
 
 ## 5. Estados que se ven
 

@@ -5,6 +5,7 @@ import { ProjectSummaryCard } from '../projects/ProjectSummaryCard'
 import {
   countByStatus, pendingDeliverableReviews, projectsForUser, recentActivity, tasksOfProjects,
 } from '../../services/dashboardService'
+import { AlertsPanel } from './AlertsPanel'
 import { TeacherOverviewPanels } from './TeacherOverviewPanels'
 import { Empty, Panel, type DashboardProps } from './shared'
 
@@ -25,6 +26,7 @@ export function SupervisorDashboard({ state, user }: DashboardProps) {
         </Link>
         <Link className="btn btn-outline" to="/app/supervision">Abrir panel de supervisión</Link>
       </div>
+      <AlertsPanel state={state} projects={projects} />
       <TeacherOverviewPanels state={state} user={user} />
       <Panel title="Proyectos supervisados">
         {projects.length === 0 ? <Empty>No supervisás proyectos.</Empty> : (

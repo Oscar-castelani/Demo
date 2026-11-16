@@ -124,11 +124,14 @@ export function changeTaskStatus(
   if (text && validateComment(text)) return state
 
   const action = `Cambió el estado de ${TASK_STATUS_LABELS[task.status]} a ${TASK_STATUS_LABELS[status]}`
+  // El evento se crea antes que la observación: en la línea de tiempo primero va el cambio y después lo que dijo el docente.
+  const event = historyEntry(actor, action)
+  const note = text ? makeComment(actor, text) : null
   const updated: Task = {
     ...task,
     status,
-    comments: text ? [...task.comments, makeComment(actor, text)] : task.comments,
-    history: [...task.history, historyEntry(actor, action)],
+    comments: note ? [...task.comments, note] : task.comments,
+    history: [...task.history, event],
   }
   return { ...state, tasks: state.tasks.map((t) => (t.id === taskId ? updated : t)) }
 }

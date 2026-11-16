@@ -119,3 +119,14 @@ Estos recorridos se ejecutaron con un caso de ejemplo precargado (después reemp
 | Ir a la pantalla, Salir y persistencia | Correcta | Vuelve a la pantalla del paso sin cambiar datos; Salir quita la barra y conserva los datos; la barra sobrevive a recargar |
 | Confirmación al activar | Correcta | Con datos pide confirmación (cancelar no activa); confirmar activa el paso 1 con la demo vacía |
 | Móvil (375 px) | Correcta | Sin desborde en los pasos recorridos; barra de 148 px con el detalle plegado y de unos 267 px con el detalle abierto |
+
+## Alertas y línea de tiempo
+
+| Prueba | Resultado | Qué se verificó |
+|---|---|---|
+| Escenarios y guía | Correcta | Los 10 escenarios siguen coincidiendo con su paso tras agregar la fecha vencida y la tarea sin responsable |
+| Alertas | Correcta | En "Tareas esperando revisión": 1 vencida, 1 en revisión y 1 sin responsable, con las mismas tareas del tablero; una fecha límite de hoy no cuenta como vencida; un entregable con cambios pedidos genera su alerta con enlace a Entregables |
+| Enlaces y actualización | Correcta | El enlace abre la tarea correcta; al resolverla (pedir correcciones) la alerta desaparece y el panel pasa de 3 a 2 |
+| Línea de tiempo del entregable | Correcta | Registró, solicitó modificaciones, comentario, volvió a enviar, aprobó y comentario, en ese orden; sin eventos redundantes; el conteo coincide |
+| Línea de tiempo de la tarea | Correcta | Eventos simulados con etiqueta y sin fecha; lo nuevo con fecha; el evento antecede a la observación |
+| Móvil (375 px) | Correcta | Panel, diálogo de tarea, Actividad y Supervisión sin desborde. El panel del docente ocupa ahora unas 2,6 pantallas por las alertas y los paneles de estudiantes y equipos abiertos |

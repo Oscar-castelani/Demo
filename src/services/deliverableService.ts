@@ -82,11 +82,14 @@ export function reviewDeliverable(
   if (text && validateComment(text)) return state
 
   const action = decision === 'approved' ? 'Aprobó el entregable' : 'Solicitó modificaciones del entregable'
+  // Primero el evento y después la devolución, para que la línea de tiempo se lea en orden.
+  const event = historyEntry(actor, action)
+  const note = text ? makeComment(actor, text) : null
   return replace(state, {
     ...deliverable,
     reviewStatus: decision,
-    comments: text ? [...deliverable.comments, makeComment(actor, text)] : deliverable.comments,
-    history: [...deliverable.history, historyEntry(actor, action)],
+    comments: note ? [...deliverable.comments, note] : deliverable.comments,
+    history: [...deliverable.history, event],
   })
 }
 

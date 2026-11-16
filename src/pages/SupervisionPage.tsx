@@ -8,8 +8,11 @@ import { Stamp } from '../components/common/Stamp'
 import { StatusCounts } from '../components/common/StatusCounts'
 import {
   TASK_STATUSES, countByStatus, deliverablesOfProjects, memberLoad, nameOf, progressPercent, projectsForUser,
-  recentActivity, recentComments, tasksOfProjects,
+  recentComments, tasksOfProjects,
 } from '../services/dashboardService'
+import { projectTimeline } from '../services/timelineService'
+import { Timeline } from '../components/common/Timeline'
+import { AlertsPanel } from '../components/dashboard/AlertsPanel'
 import { PROJECT_STATUS_LABELS, ROLE_LABELS, TASK_STATUS_LABELS } from '../utils/labels'
 import { isSafeUrl } from '../utils/url'
 import type { Project } from '../types'
@@ -20,7 +23,7 @@ function ProjectSupervision({ project }: { project: Project }) {
   const inReview = tasks.filter((t) => t.status === 'in_review')
   const deliverables = deliverablesOfProjects(state, [project])
   const comments = recentComments(state, [project], 5)
-  const activity = recentActivity(state, [project], 6)
+  const activity = projectTimeline(state, [project], 8)
   const base = `/app/proyectos/${project.id}`
 
   return (
@@ -30,6 +33,8 @@ function ProjectSupervision({ project }: { project: Project }) {
         <span className="badge badge-project">{PROJECT_STATUS_LABELS[project.status]}</span>{' '}
         Avance: {progressPercent(tasks)} % · <Link to={`${base}?tab=closure`}>Cierre y evaluación final</Link>
       </p>
+
+      <AlertsPanel state={state} projects={[project]} headingLevel={3} showProject={false} className="panel" />
 
       <Collapsible title="Tareas por estado" headingLevel={3} openOnMobile>
         <StatusCounts counts={countByStatus(tasks)} />
@@ -112,18 +117,7 @@ function ProjectSupervision({ project }: { project: Project }) {
       </Collapsible>
 
       <Collapsible title="Actividad del equipo" headingLevel={3}>
-        {activity.length === 0 ? (
-          <p className="empty">Todavía no hay actividad.</p>
-        ) : (
-          <ul className="plain-list">
-            {activity.map(({ entry, context }) => (
-              <li key={entry.id}>
-                <p>{entry.actorName}: {entry.action}</p>
-                <p className="meta">{context} · <Stamp simulated={entry.simulated} iso={entry.createdAt} /></p>
-              </li>
-            ))}
-          </ul>
-        )}
+        <Timeline items={activity} empty="Todavía no hay actividad." />
       </Collapsible>
     </section>
   )

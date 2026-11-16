@@ -5,6 +5,7 @@ import {
 } from '../services/applicationService'
 import { respondToInterest, setCoordinator } from '../services/teamService'
 import { changeTaskStatus, createTask } from '../services/taskService'
+import { todayString } from '../services/alertsService'
 import { registerDeliverable, reviewDeliverable } from '../services/deliverableService'
 import type { StudentValues } from '../utils/applicationValidation'
 
@@ -94,14 +95,15 @@ function upTo(step: number): DemoState {
   const lucia = user(s, 'Lucía Fernández')
   const mateo = user(s, 'Mateo Gómez')
   const pid = project(s).id
-  const tareas: [string, User][] = [
-    ['Juntar fotos y datos de los productos', mateo],
-    ['Definir categorías del catálogo', lucia],
-    ['Diseñar las piezas del catálogo', lucia],
-    ['Redactar las descripciones', mateo],
+  // La tercera tiene fecha límite vencida y la cuarta no tiene responsable: así el docente ve alertas.
+  const tareas: [string, User | null, string | undefined][] = [
+    ['Juntar fotos y datos de los productos', mateo, undefined],
+    ['Definir categorías del catálogo', lucia, undefined],
+    ['Diseñar las piezas del catálogo', lucia, daysAgo(2)],
+    ['Redactar las descripciones', null, undefined],
   ]
-  for (const [title, who] of tareas) {
-    s = addTask(s, pid, title, who)
+  for (const [title, who, due] of tareas) {
+    s = addTask(s, pid, title, who, due, who ?? mateo)
   }
   const ids = s.tasks.map((t) => t.id)
   s = move(s, ids[0], ['in_progress', 'in_review'], mateo)
@@ -127,8 +129,15 @@ function upTo(step: number): DemoState {
   return simulated(s)
 }
 
-function addTask(s: DemoState, projectId: string, title: string, who: User): DemoState {
-  return createTask(s, { projectId, title, description: '', assigneeId: who.id, dueDate: undefined }, who)
+function addTask(s: DemoState, projectId: string, title: string, who: User | null, dueDate: string | undefined, creator: User): DemoState {
+  return createTask(s, { projectId, title, description: '', assigneeId: who?.id ?? null, dueDate }, creator)
+}
+
+/** Fecha de hace `n` días (AAAA-MM-DD), para que la fecha límite del escenario esté vencida al cargarlo. */
+function daysAgo(n: number): string {
+  const d = new Date()
+  d.setDate(d.getDate() - n)
+  return todayString(d)
 }
 
 function move(s: DemoState, taskId: string, path: ('in_progress' | 'in_review' | 'done')[], actor: User): DemoState {

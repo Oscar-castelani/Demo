@@ -23,7 +23,7 @@ src/
   components/ common · layout · applications · forms · teams · projects · tasks · deliverables · dashboard · tools
   pages/      Welcome · RoleSelect · ApplyBusiness · ApplyStudent · Dashboard · Applications · OpenProjects
               Teams · Projects · ProjectDetail · Supervision · Tools
-  services/   storage · application · team · task · deliverable · closure · dashboard · tour · entries
+  services/   storage · application · team · task · deliverable · closure · dashboard · alerts · timeline · tour · entries
   context/    DemoContext
   hooks/      useDemo · useActiveUser · useDocumentTitle
   data/       demoData · scenarios · presentationSteps · tools
@@ -63,6 +63,12 @@ src/
 2. El reductor busca al actor y llama a la función del servicio correspondiente. Las acciones que crean a la persona (los formularios) no tienen actor.
 3. El servicio valida permisos y datos; si algo falla devuelve el mismo estado, sin cambios.
 4. Si el estado cambió, `DemoContext` lo guarda en `localStorage` y avisa si el guardado falla.
+
+## Alertas y línea de tiempo
+
+`alertsService.teacherAlerts(state, projects)` recorre tareas y entregables y devuelve alertas de cuatro tipos (vencidas, cambios solicitados, en revisión y sin responsable) con el enlace a la pantalla donde se atienden; compara fechas como texto `AAAA-MM-DD` en hora local. `AlertsPanel` las muestra en el panel de inicio del docente y dentro de cada proyecto de Supervisión.
+
+`timelineService` fusiona el historial (eventos) con los comentarios: `entityTimeline` para una tarea o un entregable (de lo más antiguo a lo más nuevo) y `projectTimeline` para el proyecto (de lo más nuevo a lo más antiguo). Los registros simulados comparten una marca de tiempo ficticia, por lo que entre ellos se respeta el orden de registro. Al cambiar de estado o revisar un entregable, el evento se crea antes que el comentario asociado para que se lea en orden. `Timeline` los dibuja con texto ("Evento" o "Comentario") y forma distintos.
 
 ## Panel del docente
 

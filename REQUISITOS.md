@@ -23,6 +23,8 @@ Una guía muestra en cada momento cuál es el próximo paso y qué rol debe actu
 - Revisión de postulaciones, proyectos abiertos, armado de equipos y coordinación.
 - Listado y detalle de proyectos, tablero de tareas, comentarios, entregables, actividad y cierre.
 - Panel de inicio del docente con la lista de estudiantes postulados (habilidades principales al pasar el mouse, enfocar con el teclado o tocar) y los equipos armados con su proyecto. Sin datos, muestra un ejemplo ilustrativo rotulado, que no se carga en la demo.
+- **Alertas del docente** (tareas vencidas, entregables con cambios solicitados, tareas esperando revisión y tareas sin responsable), calculadas solo con datos existentes, con enlace a lo que requiere atención y estado vacío claro. No se estima actividad de integrantes.
+- **Línea de tiempo** en tareas, entregables y actividad del proyecto, que diferencia eventos automáticos y comentarios, no inventa fechas para registros simulados y omite el aviso redundante "Agregó un comentario".
 - Panel de supervisión docente.
 - Sección de herramientas gratuitas con logos y enlaces.
 - **Dos caminos de entrada** (explorar un proyecto completo o crear uno desde cero) y **modo presentación** opcional de 9 pasos, con barra al pie (paso, rol, objetivo y persona ficticia), Anterior, Siguiente, Ir a la pantalla y Salir; se puede desactivar y funciona en escritorio y móvil.

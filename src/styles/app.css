@@ -270,3 +270,22 @@ a.btn, button.btn { cursor: pointer; }
   .present-actions { display: grid; grid-template-columns: 1fr 1fr; }
   .present-btn { justify-content: center; padding: 8px 6px; font-size: 0.82rem; }
 }
+
+/* Alertas */
+.alert-group { margin-top: 12px; }
+.alert-title { font-size: 0.98rem; margin-bottom: 8px; color: var(--navy-900); }
+.alert-group .plain-list a { font-weight: 700; color: var(--teal-700); }
+
+/* Línea de tiempo */
+.timeline { list-style: none; margin: 8px 0 0; padding: 0 0 0 4px; display: grid; gap: 0; border-left: 2px solid var(--sky-100); margin-left: 10px; }
+.timeline-item { position: relative; display: flex; gap: 10px; padding: 6px 0 12px 14px; }
+.timeline-dot { position: absolute; left: -12px; top: 6px; width: 22px; height: 22px; display: grid; place-items: center; font-size: 0.75rem; border-radius: 50%; background: var(--white); border: 2px solid var(--navy-900); color: var(--navy-900); }
+.timeline-comment ~ * { margin-top: 2px; }
+.timeline-kind { font-weight: 800; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--teal-700); }
+.timeline-event { margin: 2px 0 0; color: var(--text-muted); }
+.timeline-comment { margin: 4px 0 0; padding: 8px 12px; background: var(--sky-50); border-left: 4px solid var(--teal-600); border-radius: 8px; color: var(--text); }
+.timeline-comment .meta { margin: 0; }
+.timeline-body { min-width: 0; }
+.timeline-body p { margin: 0; }
+.timeline-body .timeline-head { margin-bottom: 2px; }
+@media (max-width: 640px) { .timeline-item { padding-bottom: 8px; } }

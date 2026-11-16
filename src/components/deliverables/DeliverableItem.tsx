@@ -3,6 +3,8 @@ import { useDemo } from '../../hooks/useDemo'
 import { ReviewBadge } from '../common/Badges'
 import { CommentSection } from '../common/CommentSection'
 import { Stamp } from '../common/Stamp'
+import { Timeline } from '../common/Timeline'
+import { entityTimeline } from '../../services/timelineService'
 import {
   canCommentOnDeliverable, canReviewDeliverable,
 } from '../../services/deliverableService'
@@ -92,9 +94,11 @@ export function DeliverableItem({ deliverable: d, project, user, onMessage }: Pr
         </div>
       )}
 
+      <h4 className="detail-sub">Línea de tiempo ({entityTimeline(d.history, d.comments).length})</h4>
+      <Timeline items={entityTimeline(d.history, d.comments)} />
       <CommentSection
         comments={d.comments}
-        label="Comentarios y devoluciones"
+        formOnly
         onAdd={canComment ? (content) => {
           dispatch({ type: 'addDeliverableComment', actorId: user.id, deliverableId: d.id, content })
           onMessage('Comentario agregado.')

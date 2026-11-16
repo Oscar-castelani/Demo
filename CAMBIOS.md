@@ -158,3 +158,11 @@
 - **Modo presentación**: barra al pie con el paso (de 9), el rol que actúa, la persona ficticia, el objetivo y si el paso parte de un escenario simulado; Anterior, Siguiente, Ir a la pantalla y Salir (Terminar en el paso 9). Cada paso carga su escenario, deja activa a la persona correcta y lleva a la pantalla. Pide confirmación al activarse si hay datos; no vuelve a preguntar entre pasos. Se desactiva sin perder lo cargado, y la preferencia sobrevive a recargar la página.
 - Durante la presentación se oculta la guía normal del recorrido (la barra ya cumple esa función). En el celular el detalle del paso arranca plegado (barra de unos 150 px).
 - Corrección encontrada al probar: al volver de una pantalla protegida a un formulario público el sitio redirigía al ingreso; se resolvió dejando activo al docente de demostración en los pasos con formulario.
+
+## Alertas del docente y línea de tiempo (M03 y M05)
+
+- **Alertas** en el panel de inicio del docente y en Supervisión: tareas vencidas (fecha límite pasada y sin finalizar), entregables con cambios solicitados, tareas esperando revisión y tareas sin responsable. Cada una enlaza a la tarea (se abre su detalle) o a los entregables. No se calcula "integrantes sin actividad": con fechas simuladas no sería confiable.
+- El escenario "Tareas esperando revisión" ahora trae una tarea con fecha límite vencida (relativa a hoy) y una sin responsable, para que el docente vea las alertas.
+- **Línea de tiempo** en el detalle de cada tarea y entregable y en la pestaña Actividad: eventos automáticos y comentarios diferenciados con texto y forma, con quién, rol y fecha; los simulados muestran la etiqueta y no una fecha. Se omite el evento redundante "Agregó un comentario".
+- Al pedir correcciones o revisar un entregable, el evento se registra antes que la observación, para que la historia se lea en orden (entrega, observación, corrección, reenvío, aprobación).
+- Se quitó el bloque "Historial de cambios" de la tarea (queda integrado en la línea de tiempo) y la lista de actividad se reemplazó por la línea de tiempo.
