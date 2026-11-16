@@ -166,3 +166,10 @@
 - **Línea de tiempo** en el detalle de cada tarea y entregable y en la pestaña Actividad: eventos automáticos y comentarios diferenciados con texto y forma, con quién, rol y fecha; los simulados muestran la etiqueta y no una fecha. Se omite el evento redundante "Agregó un comentario".
 - Al pedir correcciones o revisar un entregable, el evento se registra antes que la observación, para que la historia se lea en orden (entrega, observación, corrección, reenvío, aprobación).
 - Se quitó el bloque "Historial de cambios" de la tarea (queda integrado en la línea de tiempo) y la lista de actividad se reemplazó por la línea de tiempo.
+
+## Accesibilidad, teclado y permisos (M11)
+
+- Se verificó con **teclas reales** el teclado, el foco y los diálogos; se encontraron y corrigieron tres faltantes: no había enlace para saltar al contenido, el foco no se movía al cambiar de pantalla y las pestañas del proyecto no respondían a las flechas.
+- Nuevo `SkipLink` ("Saltar al contenido"), `RouteFocus` (foco al título al cambiar de ruta) y patrón de pestañas con flechas, Inicio y Fin; los `<main>` pasan a ser enfocables por código.
+- Contraste: 16 combinaciones de colores en uso, todas por encima de los mínimos WCAG; el turquesa claro solo se usa en texto grande o decorativo.
+- Matriz de permisos a nivel de lógica (sin pasar por la interfaz): 56 acciones probadas por rol, todas con el resultado esperado.

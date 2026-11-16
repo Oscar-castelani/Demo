@@ -34,7 +34,7 @@ export function RoleSelectPage() {
   }
 
   return (
-    <main className="select-page">
+    <main className="select-page" tabIndex={-1}>
       <WarningBanner />
       <div className="select-card">
         <Link to="/" className="back-link">← Volver al inicio</Link>

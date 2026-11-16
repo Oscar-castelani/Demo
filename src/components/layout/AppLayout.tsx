@@ -51,7 +51,7 @@ export function AppLayout() {
       </header>
       <WarningBanner />
       <div className="tour-wrap"><TourBanner /></div>
-      <main className="app-main">
+      <main className="app-main" tabIndex={-1}>
         <Outlet />
       </main>
     </div>

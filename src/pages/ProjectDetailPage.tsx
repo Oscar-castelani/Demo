@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import type { KeyboardEvent } from 'react'
 import { Collapsible } from '../components/common/Collapsible'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { ClosurePanel } from '../components/projects/ClosurePanel'
@@ -46,14 +47,29 @@ export function ProjectDetailPage() {
 
   const business = state.businesses.find((b) => b.id === project.businessId)
 
+  // Patrón de pestañas del teclado: una sola está en el orden de tabulación; las flechas, Inicio y Fin cambian de pestaña.
+  const onTabsKey = (e: KeyboardEvent<HTMLDivElement>) => {
+    const index = TABS.findIndex((t) => t.id === tab)
+    let next = -1
+    if (e.key === 'ArrowRight') next = (index + 1) % TABS.length
+    else if (e.key === 'ArrowLeft') next = (index - 1 + TABS.length) % TABS.length
+    else if (e.key === 'Home') next = 0
+    else if (e.key === 'End') next = TABS.length - 1
+    if (next < 0) return
+    e.preventDefault()
+    setTab(TABS[next].id)
+    document.getElementById(`tab-${TABS[next].id}`)?.focus()
+  }
+
   return (
     <div className="dashboard">
       <Link to="/app/proyectos" className="back-link">← Proyectos</Link>
       <h1>{project.title}</h1>
 
-      <div role="tablist" aria-label="Secciones del proyecto" className="tabs">
+      <div role="tablist" aria-label="Secciones del proyecto" className="tabs" onKeyDown={onTabsKey}>
         {TABS.map((t) => (
           <button key={t.id} role="tab" id={`tab-${t.id}`} aria-selected={tab === t.id} aria-controls={`panel-${t.id}`}
+            tabIndex={tab === t.id ? 0 : -1}
             className={tab === t.id ? 'tab active' : 'tab'} onClick={() => setTab(t.id)}>{t.label}</button>
         ))}
       </div>

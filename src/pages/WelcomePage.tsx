@@ -82,7 +82,7 @@ export function WelcomePage() {
   return (
     <>
       <SiteHeader items={NAV} activeId={activeId} onNavigate={scrollToSection} />
-      <main>
+      <main tabIndex={-1}>
         <section id="inicio" className="hero" aria-labelledby="hero-title">
           <div className="container">
             <div>

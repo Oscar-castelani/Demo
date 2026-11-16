@@ -79,6 +79,6 @@ Trello, Google Drive, Google Docs y Canva (las del piloto, sin Instagram) y, ade
 ## Requisitos no funcionales
 
 - Funciona en navegadores de escritorio y móviles (verificado desde 375 px, con paneles plegables y tablero deslizable).
-- Accesibilidad básica: etiquetas, texto alternativo, estados con texto e ícono, títulos distintos por pantalla. La navegación por teclado se apoya en elementos nativos, pero **falta una verificación completa** (orden de tabulación, foco y lector de pantalla).
+- Accesibilidad básica: etiquetas, texto alternativo, estados con texto e ícono, títulos distintos por pantalla. Navegación por teclado verificada con teclas reales: enlace para saltar al contenido, foco al título al cambiar de pantalla, diálogos que atrapan el foco y lo devuelven al cerrar con Escape, pestañas con flechas, Inicio y Fin, y cuadros de habilidades que se abren con el foco. **Falta probar con un lector de pantalla real** y en dispositivos físicos.
 - Avisos visibles: en la bienvenida, el ingreso, cada formulario y la cabecera se aclara que es una demostración, que los permisos son simulados, que lo cargado queda en el navegador, que los formularios no son una postulación real y que no se usen datos personales reales.
 - Sitio estático publicable en GitHub Pages.

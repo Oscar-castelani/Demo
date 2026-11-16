@@ -64,6 +64,13 @@ src/
 3. El servicio valida permisos y datos; si algo falla devuelve el mismo estado, sin cambios.
 4. Si el estado cambió, `DemoContext` lo guarda en `localStorage` y avisa si el guardado falla.
 
+## Teclado y foco
+
+- `SkipLink` es el primer elemento enfocable y lleva el foco al `<main>` (es un botón, no un ancla, porque la parte del enlace después de `#` es de las rutas). Cada `<main>` tiene `tabIndex={-1}` para poder recibir el foco.
+- `RouteFocus` lleva la vista al inicio y el foco al `<h1>` cuando cambia la ruta (no cuando cambia la pestaña ni la consulta); no actúa en la primera carga.
+- Las pestañas del proyecto siguen el patrón de teclado: solo la activa está en el orden de tabulación; flechas, Inicio y Fin cambian de pestaña y mueven el foco.
+- Los diálogos usan `<dialog>` nativo: atrapan el foco, se cierran con Escape y devuelven el foco al elemento que los abrió.
+
 ## Alertas y línea de tiempo
 
 `alertsService.teacherAlerts(state, projects)` recorre tareas y entregables y devuelve alertas de cuatro tipos (vencidas, cambios solicitados, en revisión y sin responsable) con el enlace a la pantalla donde se atienden; compara fechas como texto `AAAA-MM-DD` en hora local. `AlertsPanel` las muestra en el panel de inicio del docente y dentro de cada proyecto de Supervisión.

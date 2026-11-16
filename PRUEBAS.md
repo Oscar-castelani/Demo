@@ -130,3 +130,21 @@ Estos recorridos se ejecutaron con un caso de ejemplo precargado (después reemp
 | Línea de tiempo del entregable | Correcta | Registró, solicitó modificaciones, comentario, volvió a enviar, aprobó y comentario, en ese orden; sin eventos redundantes; el conteo coincide |
 | Línea de tiempo de la tarea | Correcta | Eventos simulados con etiqueta y sin fecha; lo nuevo con fecha; el evento antecede a la observación |
 | Móvil (375 px) | Correcta | Panel, diálogo de tarea, Actividad y Supervisión sin desborde. El panel del docente ocupa ahora unas 2,6 pantallas por las alertas y los paneles de estudiantes y equipos abiertos |
+
+## Accesibilidad, teclado y permisos (M11)
+
+Pruebas con teclas reales en el navegador de pruebas, más cálculos y verificaciones de lógica.
+
+| Prueba | Resultado | Qué se verificó |
+|---|---|---|
+| Diálogo con teclado | Correcta | Enter sobre una tarea abre el detalle, el foco entra al diálogo, Escape lo cierra y el foco vuelve a la tarea |
+| Pestañas con teclado | Corregida y correcta | Antes: las 5 pestañas estaban en el orden de tabulación y las flechas no hacían nada. Ahora: solo la activa se tabula; flecha derecha e izquierda cambian y dan la vuelta; Fin va a la última; el panel se asocia a su pestaña |
+| Enlace para saltar | Corregida y correcta | Antes: no existía. Ahora es el primer elemento enfocable, se ve al enfocarlo y Enter lleva el foco al contenido |
+| Foco al cambiar de pantalla | Corregida y correcta | Antes: el foco quedaba donde estaba. Ahora, al abrir un proyecto con Enter, el foco pasa al título |
+| Contraste de color | Correcta | 16 combinaciones calculadas; ninguna por debajo del mínimo WCAG (texto normal 4,5 a 1; texto grande y bordes 3 a 1) |
+| Estilos de foco | Correcta | No hay reglas que quiten el contorno de foco; el contorno global se ve también sobre la barra de presentación |
+| Permisos por rol, a nivel de lógica | Correcta | 56 acciones probadas llamando a los servicios sin pasar por la interfaz (crear, mover, editar y comentar tareas; registrar, revisar y comentar entregables; revisar postulaciones; armar el equipo; evaluación y cierre): todas permiten o niegan lo esperado, incluidas las que exigen observación o devolución
+
+Recordatorio: los permisos son restricciones de la interfaz y de la lógica de una demostración; **no son controles de seguridad**, porque todo corre en el navegador de la persona.
+
+**Límites de esta verificación:** no se probó con un lector de pantalla real (NVDA, VoiceOver, TalkBack) ni en celulares físicos, y el contraste se calculó sobre los colores definidos, no con una herramienta externa.

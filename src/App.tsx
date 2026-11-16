@@ -1,5 +1,7 @@
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { PresentationBar } from './components/presentation/PresentationBar'
+import { RouteFocus } from './components/common/RouteFocus'
+import { SkipLink } from './components/common/SkipLink'
 import { AppLayout, RequireUser } from './components/layout/AppLayout'
 import { DemoProvider } from './context/DemoContext'
 import { PresentationProvider } from './context/PresentationContext'
@@ -21,6 +23,8 @@ export default function App() {
     <DemoProvider>
       <PresentationProvider>
         <HashRouter>
+          <SkipLink />
+          <RouteFocus />
           <Routes>
             <Route path="/" element={<WelcomePage />} />
             <Route path="/ingresar" element={<RoleSelectPage />} />

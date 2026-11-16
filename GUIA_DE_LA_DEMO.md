@@ -165,6 +165,14 @@ Todo el ejemplo es inventado: no hay personas, comercios ni proyectos reales. Lo
 - Si se borran los datos del navegador, o si cambia la estructura de la demo, lo cargado se pierde (la demo avisa).
 - Es una **primera versión demostrativa**, pensada para mostrar el funcionamiento y recoger ideas para una plataforma real.
 
+## 9 bis. Uso con teclado
+
+- **Tab** y **Shift + Tab** recorren los elementos; el primero es **Saltar al contenido** (Enter lleva al contenido principal).
+- Al cambiar de pantalla, el foco pasa al título para que quien usa lector de pantalla sepa dónde está.
+- En las pestañas del proyecto, **← →** cambian de pestaña y **Inicio** y **Fin** van a la primera y a la última.
+- En las ventanas (detalle de tarea, formularios, confirmaciones), **Escape** las cierra y el foco vuelve a donde estabas.
+- Los nombres de estudiantes muestran sus habilidades al enfocarlos con el teclado; **Escape** las oculta.
+
 ## 10. Uso en el celular
 
 La demo funciona desde el teléfono: los paneles se pliegan para no obligar a desplazarse tanto, el tablero de tareas se desliza hacia los costados y los formularios se adaptan al ancho de la pantalla.

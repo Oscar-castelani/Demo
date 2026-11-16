@@ -11,7 +11,7 @@ interface Props {
 /** Estructura común de las pantallas con formulario de postulación. */
 export function FormPage({ title, intro, children }: Props) {
   return (
-    <main className="select-page">
+    <main className="select-page" tabIndex={-1}>
       <WarningBanner />
       <div className="select-card form-card">
         <Link to="/ingresar" className="back-link">← Volver</Link>
