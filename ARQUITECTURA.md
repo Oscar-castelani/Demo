@@ -89,10 +89,6 @@ src/
 
 `src/data/scenarios.ts` arma estados de la demo **con la misma lógica que usa la aplicación** (los servicios), avanzando paso a paso: postulación, revisión, proyecto abierto, perfiles, postulantes, equipo, tareas, entregables y cierre. Hay un escenario por paso de la guía (10 en total, con el proyecto finalizado). Todo queda marcado como simulado. `ScenarioPicker` lista los escenarios elegibles en el ingreso; el resto los usará el modo presentación.
 
-## Modo presentación
-
-`PresentationContext` guarda el paso activo (1 a 9 o ninguno) en `localStorage` como preferencia de pantalla: no es un dato de la demo y no se borra al restablecerla. `data/presentationSteps.ts` define los 9 pasos (título, rol, persona ficticia, objetivo y pantalla). `usePresentationActions` carga el escenario del paso (`scenarioForStep`), deja activa a la persona que corresponde y navega; en los pasos con formulario público deja activo al docente de demostración para que la pantalla protegida de origen no redirija al ingreso durante la navegación. `PresentationBar` es una barra `sticky` al final de la página (no tapa el contenido) y `PresentationOffer` (en la pantalla de ingreso) ofrece el botón para activar el modo (con confirmación si hay datos).
-
 ## Páginas públicas
 
 Inicio, Cómo funciona, Beneficios, Herramientas, Demo y Sobre el proyecto son rutas propias (`/`, `/como-funciona`, `/beneficios`, `/herramientas`, `/demo`, `/proyecto`) dentro de `PublicLayout`, que aporta el encabezado con el menú (`SiteHeader`, con `NavLink`) y el pie. Cada clic en el menú abre una página nueva en lugar de desplazarse por una sola pantalla.

@@ -15,14 +15,13 @@ Un comercio presenta un proyecto, un docente lo revisa y arma un equipo de estud
 ## 2. Cómo se usa
 
 1. Entrá a la dirección y tocá **Ver la demo** o **Iniciar la demostración**.
-2. En la pantalla de ingreso, bajo **¿Cómo querés recorrer la demo?**, **elegí el rol**. Para ver un caso ya armado, usá los escenarios (punto 5) o el **modo presentación** (punto 6).
+2. En la pantalla de ingreso, bajo **¿Cómo querés recorrer la demo?**, **elegí el rol**. Para ver un caso ya armado, usá los escenarios (punto 5).
 3. No se piden contraseñas. Comercios y estudiantes **completan un formulario** de postulación: ese formulario los identifica. Los docentes entran directo.
 4. Para cambiar de persona, usá **Cambiar usuario**. Lo cargado no se pierde.
 5. Para probar **solo una parte** del recorrido sin hacer los pasos anteriores, abrí **Escenarios para probar una parte del recorrido** (más abajo, en la misma pantalla): *Proyecto recién postulado*, *Estudiantes postulados*, *Equipo armado, sin tareas*, *Tareas esperando revisión* y *Listo para cerrar*. Todos son ficticios y quedan marcados como simulados.
-6. **Modo presentación:** pensado para mostrar la demo sin cambiar de rol a mano. Aparece una barra al pie que dice **quién hace qué en este paso** (por ejemplo, «El comercio carga los datos de su proyecto») y, entre paréntesis, **qué veremos en la siguiente pantalla** (por ejemplo, que el docente supervisa la postulación). Con **Ver detalle** se muestra el número de paso (de 9), el **rol** que actúa y la **persona ficticia**. **Anterior** y **Siguiente** cargan el escenario de cada paso y te llevan a la pantalla con la persona correcta; **Ir a la pantalla** vuelve a la del paso sin cambiar datos; **Salir** (o **Terminar** en el paso 9) lo desactiva y conserva lo que haya en la demo. Desde el paso 2, lo precargado es ficticio y está marcado como simulado.
-7. **Restablecer demo** (arriba a la derecha) borra todo y vuelve a dejarla vacía. Pide confirmación.
+6. **Restablecer demo** (arriba a la derecha) borra todo y vuelve a dejarla vacía. Pide confirmación.
 
-> Todas las acciones que reemplazan lo que cargaste (cargar un escenario o activar el modo presentación) **piden confirmación** cuando ya hay datos. Si no hay nada cargado, no hay nada que perder y se ejecutan directamente. Dentro del modo presentación, Anterior y Siguiente no vuelven a preguntar, porque ya lo avisaste al activarlo.
+> Todas las acciones que reemplazan lo que cargaste (por ejemplo, cargar un escenario) **piden confirmación** cuando ya hay datos. Si no hay nada cargado, no hay nada que perder y se ejecutan directamente.
 
 ### Los 9 pasos de la demo
 

@@ -20,7 +20,7 @@ export interface Scenario {
   label: string
   /** Para qué sirve cargarlo. */
   purpose: string
-  /** Si se ofrece en la pantalla de ingreso (los demás los usa el modo presentación). */
+  /** Si se ofrece en la pantalla de ingreso (los demás quedan sin ofrecer). */
   listed: boolean
   build: () => DemoState
 }
