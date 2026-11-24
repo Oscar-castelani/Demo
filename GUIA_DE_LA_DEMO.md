@@ -15,17 +15,14 @@ Un comercio presenta un proyecto, un docente lo revisa y arma un equipo de estud
 ## 2. Cómo se usa
 
 1. Entrá a la dirección y tocá **Ver la demo** o **Iniciar la demostración**.
-2. **Elegí cómo recorrerla**, en la pantalla de ingreso:
-   - **Explorar un proyecto completo:** carga un caso ficticio ya terminado (equipo, tareas, entregables y evaluación final). Ideal para ver cómo queda todo.
-   - **Crear un proyecto desde cero:** empezás con la demo vacía y vas al formulario del comercio; recorrés todo el proceso.
-   - **Modo presentación:** ver el punto 6.
-3. O **elegí un rol** directamente. No se piden contraseñas. Comercios y estudiantes **completan un formulario** de postulación: ese formulario los identifica. Los docentes entran directo.
+2. En la pantalla de ingreso, bajo **¿Cómo querés recorrer la demo?**, **elegí el rol**. Para ver un caso ya armado, usá los escenarios (punto 5) o el **modo presentación** (punto 6).
+3. Con el rol elegido: No se piden contraseñas. Comercios y estudiantes **completan un formulario** de postulación: ese formulario los identifica. Los docentes entran directo.
 4. Para cambiar de persona, usá **Cambiar usuario**. Lo cargado no se pierde.
 5. Para probar **solo una parte** del recorrido sin hacer los pasos anteriores, abrí **Escenarios para probar una parte del recorrido** (más abajo, en la misma pantalla): *Proyecto recién postulado*, *Estudiantes postulados*, *Equipo armado, sin tareas*, *Tareas esperando revisión* y *Listo para cerrar*. Todos son ficticios y quedan marcados como simulados.
 6. **Modo presentación:** pensado para mostrar la demo sin cambiar de rol a mano. Aparece una barra al pie con el **paso actual (de 9)**, qué **rol** actúa, qué se hace y con qué **persona ficticia**. **Anterior** y **Siguiente** cargan el escenario de cada paso y te llevan a la pantalla con la persona correcta; **Ir a la pantalla** vuelve a la del paso sin cambiar datos; **Salir** (o **Terminar** en el paso 9) lo desactiva y conserva lo que haya en la demo. Desde el paso 2, lo precargado es ficticio y está marcado como simulado.
 7. **Restablecer demo** (arriba a la derecha) borra todo y vuelve a dejarla vacía. Pide confirmación.
 
-> Todas las acciones que reemplazan lo que cargaste (cargar el ejemplo, un escenario, empezar desde cero o activar el modo presentación) **piden confirmación** cuando ya hay datos. Si no hay nada cargado, no hay nada que perder y se ejecutan directamente. Dentro del modo presentación, Anterior y Siguiente no vuelven a preguntar, porque ya lo avisaste al activarlo.
+> Todas las acciones que reemplazan lo que cargaste (cargar un escenario o activar el modo presentación) **piden confirmación** cuando ya hay datos. Si no hay nada cargado, no hay nada que perder y se ejecutan directamente. Dentro del modo presentación, Anterior y Siguiente no vuelven a preguntar, porque ya lo avisaste al activarlo.
 
 ### Los 9 pasos de la demo
 

@@ -196,3 +196,4 @@
 
 - Se quitó la guía del recorrido (cuadro con los 9 pasos): para esta etapa no hace falta y en el celular no se resolvía bien. El modo presentación sigue como estaba.
 - Cada opción del menú (Cómo funciona, Beneficios, Herramientas, Demo, Sobre el proyecto) es ahora una página propia en lugar de una sección más abajo en la misma pantalla. Inicio queda solo con la portada.
+- Pantalla de ingreso: se quitaron las opciones «Explorar un proyecto completo» y «Crear un proyecto desde cero». Bajo «¿Cómo querés recorrer la demo?» solo queda el subtítulo «Elegí el rol» con los cuatro roles.

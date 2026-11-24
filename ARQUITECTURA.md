@@ -91,7 +91,7 @@ src/
 
 ## Modo presentación
 
-`PresentationContext` guarda el paso activo (1 a 9 o ninguno) en `localStorage` como preferencia de pantalla: no es un dato de la demo y no se borra al restablecerla. `data/presentationSteps.ts` define los 9 pasos (título, rol, persona ficticia, objetivo y pantalla). `usePresentationActions` carga el escenario del paso (`scenarioForStep`), deja activa a la persona que corresponde y navega; en los pasos con formulario público deja activo al docente de demostración para que la pantalla protegida de origen no redirija al ingreso durante la navegación. `PresentationBar` es una barra `sticky` al final de la página (no tapa el contenido) y `PathCards` ofrece los dos caminos de entrada y el botón para activar el modo (con confirmación si hay datos).
+`PresentationContext` guarda el paso activo (1 a 9 o ninguno) en `localStorage` como preferencia de pantalla: no es un dato de la demo y no se borra al restablecerla. `data/presentationSteps.ts` define los 9 pasos (título, rol, persona ficticia, objetivo y pantalla). `usePresentationActions` carga el escenario del paso (`scenarioForStep`), deja activa a la persona que corresponde y navega; en los pasos con formulario público deja activo al docente de demostración para que la pantalla protegida de origen no redirija al ingreso durante la navegación. `PresentationBar` es una barra `sticky` al final de la página (no tapa el contenido) y `PresentationOffer` (en la pantalla de ingreso) ofrece el botón para activar el modo (con confirmación si hay datos).
 
 ## Páginas públicas
 
