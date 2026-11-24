@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { useDemo } from '../hooks/useDemo'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
@@ -32,6 +32,16 @@ export function RoleSelectPage() {
     if (askedRole && ROLE_ORDER.includes(askedRole)) setRole(askedRole)
   }
 
+  const roleGridRef = useRef<HTMLDivElement>(null)
+  const chooseRole = () => {
+    // Se difiere: al cerrarse el aviso, el navegador devuelve el foco a su origen y pisaría este.
+    setTimeout(() => {
+      const grid = roleGridRef.current
+      grid?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      grid?.querySelector<HTMLButtonElement>('button')?.focus({ preventScroll: true })
+    }, 0)
+  }
+
   const users = role ? state.users.filter((u) => u.role === role) : []
   const newLink = role ? NEW_LINKS[role] : undefined
 
@@ -55,7 +65,7 @@ export function RoleSelectPage() {
 
         <h2 className="step-title">¿Cómo querés recorrer la demo?</h2>
         <h3 className="role-subtitle">Elegí el rol</h3>
-        <div className="role-grid" role="group" aria-label="Roles disponibles">
+        <div className="role-grid" ref={roleGridRef} role="group" aria-label="Roles disponibles">
           {ROLE_ORDER.map((r) => (
             <button
               key={r}
@@ -100,7 +110,7 @@ export function RoleSelectPage() {
           </>
         )}
 
-        <ScenarioPicker />
+        <ScenarioPicker onChooseRole={chooseRole} />
         <PresentationOffer />
       </div>
     </main>

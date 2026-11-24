@@ -87,6 +87,7 @@
 .dialog { border: 0; border-radius: var(--radius-lg); padding: 28px; max-width: 460px; box-shadow: var(--shadow); color: var(--text); }
 .dialog::backdrop { background: rgba(11, 42, 107, 0.45); }
 .dialog h2 { font-size: 1.3rem; margin-bottom: 10px; }
+.dialog p + p { margin-top: 10px; }
 .dialog-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; margin-top: 22px; }
 a.btn, button.btn { cursor: pointer; }
 
