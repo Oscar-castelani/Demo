@@ -19,7 +19,16 @@
 .role-card span { color: var(--text-muted); font-size: 0.93rem; }
 .role-card:hover { border-color: var(--teal-600); }
 .role-card.selected { border-color: var(--navy-900); background: var(--sky-50); }
-.role-card.selected strong::before { content: '✔ '; color: var(--teal-600); }
+.role-card strong { display: flex; align-items: center; gap: 10px; }
+/* Círculo tipo opción: vacío si no está elegido, relleno con un punto blanco si lo está. */
+.role-card strong::before {
+  content: ''; flex: none; width: 20px; height: 20px; box-sizing: border-box; border-radius: 50%;
+  border: 2px solid var(--text-muted); background: var(--white);
+}
+.role-card:hover strong::before { border-color: var(--teal-600); }
+.role-card.selected strong::before {
+  border-color: var(--teal-600); background: var(--teal-600); box-shadow: inset 0 0 0 3px var(--white);
+}
 .user-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 14px; }
 .empty { color: var(--text-muted); font-style: italic; }
 
