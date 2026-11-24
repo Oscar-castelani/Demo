@@ -198,18 +198,10 @@ a.btn, button.btn { cursor: pointer; }
   .tool-logo { width: 44px; height: 44px; }
 }
 
-/* Guía del recorrido */
+/* Contenedor del pie de la aplicación */
 .tour-wrap { max-width: 1440px; margin: 12px auto 0; padding-inline: var(--gutter); }
-.tour { background: var(--white); border: 2px solid var(--teal-600); border-radius: var(--radius); padding: 12px 14px; margin: 14px 0; display: grid; gap: 6px; justify-items: start; }
-.tour-wrap .tour { margin: 0; }
-.tour-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; }
-.tour-head strong { color: var(--teal-700); font-size: 0.9rem; }
-.tour-close { background: none; border: 0; font-size: 1.4rem; line-height: 1; color: var(--text-muted); padding: 2px 8px; border-radius: 8px; }
-.tour-show { margin: 12px var(--gutter) 0; }
 @media (max-width: 640px) {
   .tour-wrap { margin-top: 8px; padding-inline: 12px; }
-  .tour { padding: 10px 12px; font-size: 0.9rem; }
-  .tour-show { margin: 8px 12px 0; }
 }
 .tools-group > summary { padding: 6px 0; border-bottom: 2px solid var(--sky-100); }
 .tools-group > summary h2, .tools-group > summary h3 { font-size: 1.1rem; color: var(--navy-900); }

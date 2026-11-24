@@ -6,7 +6,7 @@ Demostración de una plataforma que vincula estudiantes de la Tecnicatura Univer
 
 > **Esto es una demostración.** No hay cuentas reales, contraseñas, base de datos ni servidor. Los permisos de cada rol se simulan en la interfaz y **no son un sistema de seguridad**. Lo que se carga queda solo en el navegador de quien lo escribe. Los formularios **no son una postulación real** a ningún programa universitario: usá datos ficticios.
 
-**Estado:** versión 2. La demo arranca vacía y cada rol se postula y recorre el proceso (postulaciones, equipos, tablero, entregables y cierre), con herramientas gratuitas y una guía del recorrido. Hay un caso de ejemplo ficticio que se carga con un botón.
+**Estado:** versión 2. La demo arranca vacía y cada rol se postula y recorre el proceso (postulaciones, equipos, tablero, entregables y cierre), con herramientas gratuitas. Hay un caso de ejemplo ficticio que se carga con un botón.
 
 Para entender qué hace cada rol, leé la **[Guía de la demo](GUIA_DE_LA_DEMO.md)**.
 

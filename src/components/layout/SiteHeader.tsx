@@ -1,14 +1,13 @@
 import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 export interface NavItem {
-  id: string
+  to: string
   label: string
 }
 
 interface Props {
   items: NavItem[]
-  activeId: string
-  onNavigate: (id: string) => void
 }
 
 function Logo() {
@@ -21,24 +20,19 @@ function Logo() {
   )
 }
 
-export function SiteHeader({ items, activeId, onNavigate }: Props) {
+export function SiteHeader({ items }: Props) {
   const [open, setOpen] = useState(false)
-
-  const go = (id: string) => {
-    setOpen(false)
-    onNavigate(id)
-  }
 
   return (
     <header className="site-header">
       <div className="container">
-        <a className="brand" href="#inicio" onClick={(e) => { e.preventDefault(); go('inicio') }}>
+        <Link className="brand" to="/" onClick={() => setOpen(false)}>
           <Logo />
           <span>
             <span className="brand-name">TUCE <span>Conecta</span></span>
             <span className="brand-tag">Vinculación académica con el entorno productivo</span>
           </span>
-        </a>
+        </Link>
         <button
           className="nav-toggle"
           aria-expanded={open}
@@ -49,14 +43,9 @@ export function SiteHeader({ items, activeId, onNavigate }: Props) {
         </button>
         <nav id="main-nav" className={`nav${open ? ' open' : ''}`} aria-label="Principal">
           {items.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              aria-current={activeId === item.id ? 'true' : undefined}
-              onClick={(e) => { e.preventDefault(); go(item.id) }}
-            >
+            <NavLink key={item.to} to={item.to} end onClick={() => setOpen(false)}>
               {item.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
       </div>

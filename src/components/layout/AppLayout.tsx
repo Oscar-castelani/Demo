@@ -3,7 +3,6 @@ import { Link, NavLink, Navigate, Outlet, useNavigate } from 'react-router-dom'
 import { useActiveUser } from '../../hooks/useActiveUser'
 import { ResetDemoButton } from '../common/ResetDemoButton'
 import { WarningBanner } from '../common/WarningBanner'
-import { TourBanner } from '../common/TourBanner'
 import { EvaluationLink } from '../common/EvaluationLink'
 import { ROLE_LABELS } from '../../utils/labels'
 
@@ -51,7 +50,6 @@ export function AppLayout() {
         <p className="demo-ribbon">Demostración: permisos simulados; lo cargado queda en este navegador. No uses datos reales.</p>
       </header>
       <WarningBanner />
-      <div className="tour-wrap"><TourBanner /></div>
       <main className="app-main" tabIndex={-1}>
         <Outlet />
       </main>

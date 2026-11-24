@@ -16,7 +16,7 @@ export function ScenarioPicker() {
   const load = (scenario: Scenario) => {
     dispatch({ type: 'replace', state: scenario.build() })
     setPending(null)
-    setMessage(`Escenario cargado: ${scenario.label}. Seguí la guía del recorrido.`)
+    setMessage(`Escenario cargado: ${scenario.label}.`)
   }
 
   return (

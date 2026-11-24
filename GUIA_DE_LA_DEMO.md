@@ -27,8 +27,7 @@ Un comercio presenta un proyecto, un docente lo revisa y arma un equipo de estud
 
 > Todas las acciones que reemplazan lo que cargaste (cargar el ejemplo, un escenario, empezar desde cero o activar el modo presentación) **piden confirmación** cuando ya hay datos. Si no hay nada cargado, no hay nada que perder y se ejecutan directamente. Dentro del modo presentación, Anterior y Siguiente no vuelven a preguntar, porque ya lo avisaste al activarlo.
 
-### Guía del recorrido
-Un cuadro verde indica **en qué paso va la demo (de 9), qué rol tiene que actuar y a qué pantalla ir**. Se puede ocultar y volver a mostrar.
+### Los 9 pasos de la demo
 
 | Paso | Quién | Qué hace |
 |---|---|---|
@@ -42,7 +41,6 @@ Un cuadro verde indica **en qué paso va la demo (de 9), qué rol tiene que actu
 | 8 | Estudiante y comercio | Registran y revisan entregables |
 | 9 | Docente | Registra la evaluación final y cierra el proyecto |
 
----
 
 ## 3. Los roles y sus funciones
 

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
-import { TourBanner } from '../components/common/TourBanner'
 import { useDemo } from '../hooks/useDemo'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 import { WarningBanner } from '../components/common/WarningBanner'
@@ -53,7 +52,6 @@ export function RoleSelectPage() {
           y los formularios <strong>no son una postulación real</strong> a ningún programa universitario. No uses datos
           personales reales.
         </p>
-        <TourBanner />
 
         <PathCards />
 

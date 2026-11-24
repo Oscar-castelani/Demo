@@ -17,6 +17,12 @@ import { TeamsPage } from './pages/TeamsPage'
 import { ToolsPage } from './pages/ToolsPage'
 import { RoleSelectPage } from './pages/RoleSelectPage'
 import { WelcomePage } from './pages/WelcomePage'
+import { HowItWorksPage } from './pages/HowItWorksPage'
+import { BenefitsPage } from './pages/BenefitsPage'
+import { PublicToolsPage } from './pages/PublicToolsPage'
+import { DemoIntroPage } from './pages/DemoIntroPage'
+import { AboutPage } from './pages/AboutPage'
+import { PublicLayout } from './components/layout/PublicLayout'
 
 export default function App() {
   return (
@@ -26,7 +32,14 @@ export default function App() {
           <SkipLink />
           <RouteFocus />
           <Routes>
-            <Route path="/" element={<WelcomePage />} />
+            <Route element={<PublicLayout />}>
+              <Route path="/" element={<WelcomePage />} />
+              <Route path="/como-funciona" element={<HowItWorksPage />} />
+              <Route path="/beneficios" element={<BenefitsPage />} />
+              <Route path="/herramientas" element={<PublicToolsPage />} />
+              <Route path="/demo" element={<DemoIntroPage />} />
+              <Route path="/proyecto" element={<AboutPage />} />
+            </Route>
             <Route path="/ingresar" element={<RoleSelectPage />} />
             <Route path="/postular/comercio" element={<ApplyBusinessPage />} />
             <Route path="/postular/estudiante" element={<ApplyStudentPage />} />

@@ -191,3 +191,8 @@
 - Estudiante: tras postularse, un aviso explica qué pasa ahora (el docente revisa; si lo aceptan, el proyecto aparece en «Mis proyectos»).
 - Formulario del comercio: ejemplo y ayuda en «¿Qué resultado esperan?» y en «Tipo de ayuda».
 - El logo de la cabecera de la app vuelve a la página de inicio.
+
+## Páginas separadas y sin recorrido guiado
+
+- Se quitó la guía del recorrido (cuadro con los 9 pasos): para esta etapa no hace falta y en el celular no se resolvía bien. El modo presentación sigue como estaba.
+- Cada opción del menú (Cómo funciona, Beneficios, Herramientas, Demo, Sobre el proyecto) es ahora una página propia en lugar de una sección más abajo en la misma pantalla. Inicio queda solo con la portada.
