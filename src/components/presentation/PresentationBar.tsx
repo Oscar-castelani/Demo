@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { PRESENTATION_STEPS, PRESENTATION_TOTAL } from '../../data/presentationSteps'
+import { nextStepHint, PRESENTATION_STEPS, PRESENTATION_TOTAL } from '../../data/presentationSteps'
 import { usePresentation, usePresentationActions } from '../../hooks/usePresentation'
 import { ROLE_LABELS } from '../../utils/labels'
 
@@ -21,8 +21,8 @@ export function PresentationBar() {
     <aside className="present-bar" aria-label="Modo presentación">
       <div className="present-row">
         <p className="present-title">
-          <strong>Presentación · paso {step} de {PRESENTATION_TOTAL}</strong>
-          <span> — {def.title}</span>
+          <strong>{def.title}</strong>
+          <span> ({nextStepHint(step)})</span>
         </p>
         <button type="button" className="present-link" aria-expanded={detail} onClick={() => setDetail((d) => !d)}>
           {detail ? 'Ocultar detalle' : 'Ver detalle'}
@@ -33,7 +33,7 @@ export function PresentationBar() {
         <div className="present-detail">
           <p>{def.objective}</p>
           <p className="present-meta">
-            Actúa: <strong>{ROLE_LABELS[def.role]}</strong>{def.userName ? ` (${def.userName})` : ''}.{' '}
+            Modo presentación · paso {step} de {PRESENTATION_TOTAL}. Actúa: <strong>{ROLE_LABELS[def.role]}</strong>{def.userName ? ` (${def.userName})` : ''}.{' '}
             {step === 1
               ? 'Este paso parte de la demo vacía.'
               : 'Este paso parte de un escenario ficticio: lo ya cargado está marcado como simulado.'}
