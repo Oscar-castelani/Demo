@@ -197,3 +197,4 @@
 - Se quitó la guía del recorrido (cuadro con los 9 pasos): para esta etapa no hace falta y en el celular no se resolvía bien. El modo presentación sigue como estaba.
 - Cada opción del menú (Cómo funciona, Beneficios, Herramientas, Demo, Sobre el proyecto) es ahora una página propia en lugar de una sección más abajo en la misma pantalla. Inicio queda solo con la portada.
 - Pantalla de ingreso: se quitaron las opciones «Explorar un proyecto completo» y «Crear un proyecto desde cero». Bajo «¿Cómo querés recorrer la demo?» solo queda el subtítulo «Elegí el rol» con los cuatro roles.
+- Formulario de usabilidad (Google Forms): se eliminaron las 3 respuestas simuladas, se quitó la pregunta «Tipo de respuesta» y se reescribió la descripción para uso real. Se agregaron «¿Desde qué dispositivo probaste la demo?», «¿Pudiste cumplir tu tarea sin ayuda?» y «¿Qué fue lo que más te gustó?», y las preguntas abiertas llevan un ejemplo de respuesta.

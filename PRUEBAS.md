@@ -162,9 +162,9 @@ Recordatorio: los permisos son restricciones de la interfaz y de la lógica de u
 
 ## Evaluación de usabilidad con personas (M04)
 
-**Qué es y qué no es.** Recorrí el sitio publicado en Chrome actuando como tres personas ficticias de las fichas del proyecto: Elena Martínez (docente voluntaria), Laura Giménez (estudiante) y Martín Alarcón (dueño de «Vivero Raíces»). Es una **simulación**: sirve para detectar problemas de uso, pero **no es evidencia de usuarios reales**. Las tres respuestas del formulario están rotuladas «Simulación con persona ficticia». Para el trabajo académico, conviene repetir la encuesta con personas reales.
+**Qué es y qué no es.** Recorrí el sitio publicado en Chrome actuando como tres personas ficticias de las fichas del proyecto: Elena Martínez (docente voluntaria), Laura Giménez (estudiante) y Martín Alarcón (dueño de «Vivero Raíces»). Es una **simulación**: sirve para detectar problemas de uso, pero **no es evidencia de usuarios reales**. Esas tres respuestas simuladas se eliminaron del formulario el 24/11/2026 (los hallazgos y los puntajes quedan registrados en esta sección). El formulario quedó vacío y listo para que lo respondan personas reales de la cátedra.
 
-**Formulario externo (Google Forms):** «Prueba de usabilidad – TUCE Conecta (demo)». Preguntas: rol, tipo de respuesta (real o simulación), facilidad de uso (1 a 5), claridad del proceso (1 a 5), utilidad del seguimiento (1 a 5), dificultades y mejoras. El enlace está en la bienvenida y al pie de la app (`src/data/evaluation.ts`). No recibe datos de la aplicación.
+**Formulario externo (Google Forms):** «Prueba de usabilidad – TUCE Conecta (demo)». Preguntas: rol, dispositivo (computadora, celular o tableta), facilidad de uso (1 a 5), claridad del proceso (1 a 5), utilidad del seguimiento (1 a 5), si pudo cumplir la tarea sin ayuda, dificultades y mejoras (con un ejemplo de respuesta cada una) y qué fue lo que más le gustó (opcional). Es anónimo: no pide correo ni inicio de sesión. El enlace está en la bienvenida y al pie de la app (`src/data/evaluation.ts`). No recibe datos de la aplicación.
 
 | Persona | Facilidad | Claridad | Utilidad |
 |---|---|---|---|
