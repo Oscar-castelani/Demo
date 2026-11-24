@@ -3,7 +3,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { useDemo } from '../hooks/useDemo'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 import { WarningBanner } from '../components/common/WarningBanner'
-import { PathCards } from '../components/common/PathCards'
+import { PresentationOffer } from '../components/presentation/PresentationOffer'
 import { ScenarioPicker } from '../components/common/ScenarioPicker'
 import { ROLE_DESCRIPTIONS, ROLE_LABELS, ROLE_ORDER } from '../utils/labels'
 import type { Role } from '../types'
@@ -53,9 +53,8 @@ export function RoleSelectPage() {
           personales reales.
         </p>
 
-        <PathCards />
-
-        <h2 className="step-title">O elegí un rol directamente</h2>
+        <h2 className="step-title">¿Cómo querés recorrer la demo?</h2>
+        <h3 className="role-subtitle">Elegí el rol</h3>
         <div className="role-grid" role="group" aria-label="Roles disponibles">
           {ROLE_ORDER.map((r) => (
             <button
@@ -102,6 +101,7 @@ export function RoleSelectPage() {
         )}
 
         <ScenarioPicker />
+        <PresentationOffer />
       </div>
     </main>
   )

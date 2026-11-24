@@ -10,6 +10,7 @@
 .back-link { color: var(--teal-700); font-weight: 700; text-decoration: none; }
 .back-link:hover { text-decoration: underline; }
 .step-title { font-size: 1.15rem; margin: 32px 0 14px; }
+.role-subtitle { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: -6px 0 14px; }
 .role-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 .role-card {
   text-align: left; display: flex; flex-direction: column; gap: 6px; padding: 18px;
@@ -234,11 +235,6 @@ a.btn, button.btn { cursor: pointer; }
 .team-card .plain-list li { padding-bottom: 6px; }
 
 /* Dos caminos de entrada */
-.path-grid { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
-.path-card { border: 2px solid var(--border); border-radius: var(--radius); padding: 16px; display: grid; gap: 8px; align-content: start; background: var(--white); }
-.path-card h3 { font-size: 1.1rem; }
-.path-card p { color: var(--text-muted); font-size: 0.95rem; }
-.path-card .btn { justify-self: start; }
 .present-offer { margin-top: 14px; padding: 12px 14px; border-radius: 12px; background: var(--sky-50); display: flex; gap: 14px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
 
 /* Barra del modo presentación: queda al final de la página y no tapa el contenido */
@@ -255,8 +251,6 @@ a.btn, button.btn { cursor: pointer; }
 .present-primary { background: #bfe6f2; border-color: #bfe6f2; }
 .present-bar :focus-visible { outline-color: #ffffff; }
 @media (max-width: 640px) {
-  .path-grid { grid-template-columns: 1fr; gap: 10px; }
-  .path-card { padding: 12px; }
   .present-bar { padding: 8px 12px; gap: 6px; }
   .present-title { font-size: 0.85rem; }
   .present-actions { display: grid; grid-template-columns: 1fr 1fr; }
