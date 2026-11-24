@@ -16,7 +16,7 @@ Un comercio presenta un proyecto, un docente lo revisa y arma un equipo de estud
 
 1. Entrá a la dirección y tocá **Ver la demo** o **Iniciar la demostración**.
 2. En la pantalla de ingreso, bajo **¿Cómo querés recorrer la demo?**, **elegí el rol**. Para ver un caso ya armado, usá los escenarios (punto 5) o el **modo presentación** (punto 6).
-3. Con el rol elegido: No se piden contraseñas. Comercios y estudiantes **completan un formulario** de postulación: ese formulario los identifica. Los docentes entran directo.
+3. No se piden contraseñas. Comercios y estudiantes **completan un formulario** de postulación: ese formulario los identifica. Los docentes entran directo.
 4. Para cambiar de persona, usá **Cambiar usuario**. Lo cargado no se pierde.
 5. Para probar **solo una parte** del recorrido sin hacer los pasos anteriores, abrí **Escenarios para probar una parte del recorrido** (más abajo, en la misma pantalla): *Proyecto recién postulado*, *Estudiantes postulados*, *Equipo armado, sin tareas*, *Tareas esperando revisión* y *Listo para cerrar*. Todos son ficticios y quedan marcados como simulados.
 6. **Modo presentación:** pensado para mostrar la demo sin cambiar de rol a mano. Aparece una barra al pie con el **paso actual (de 9)**, qué **rol** actúa, qué se hace y con qué **persona ficticia**. **Anterior** y **Siguiente** cargan el escenario de cada paso y te llevan a la pantalla con la persona correcta; **Ir a la pantalla** vuelve a la del paso sin cambiar datos; **Salir** (o **Terminar** en el paso 9) lo desactiva y conserva lo que haya en la demo. Desde el paso 2, lo precargado es ficticio y está marcado como simulado.
